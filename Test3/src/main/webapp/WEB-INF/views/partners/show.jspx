@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pl_sts_test3_domain_Partner" object="${partner}" path="/partners" z="z20uq+Y/bGwm2Z1vsBMKNqwBQ6A=">
+        <field:display field="nazwa" id="s_pl_sts_test3_domain_Partner_nazwa" object="${partner}" z="83xsS/HUiGQEUqxEZnHgDRu91bY="/>
+        <field:display field="akcjonariusz" id="s_pl_sts_test3_domain_Partner_akcjonariusz" object="${partner}" z="mw4e9+kQpxIy+m1iXH/jOOp1TYw="/>
+        <field:display field="wartosc" id="s_pl_sts_test3_domain_Partner_wartosc" object="${partner}" z="3Qr0Tcy5569w4VGzfyaxAtgH2lg="/>
+        <field:display field="projekty" id="s_pl_sts_test3_domain_Partner_projekty" object="${partner}" z="JaZ+aOvqc987ZRcRalsgNqu7MHk="/>
+    </page:show>
+</div>

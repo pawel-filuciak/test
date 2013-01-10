@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pl_sts_test3_domain_Partner" items="${partners}" z="+wT1HzENTwlp21V5uFJyBzAxjkg=">
+        <table:table data="${partners}" id="l_pl_sts_test3_domain_Partner" path="/partners" z="0uzZDRYmuwEYkYsBJ3QzAj6t5yY=">
+            <table:column id="c_pl_sts_test3_domain_Partner_nazwa" property="nazwa" z="moJDR7vIHmdaNmC+dmqR3I5fZHw="/>
+            <table:column id="c_pl_sts_test3_domain_Partner_akcjonariusz" property="akcjonariusz" z="eCM9V66Wf04XMrahLjclcUY2cd8="/>
+            <table:column id="c_pl_sts_test3_domain_Partner_wartosc" property="wartosc" z="vUT/4bniX9sXyHct69uQb+wZYnM="/>
+            <table:column id="c_pl_sts_test3_domain_Partner_projekty" property="projekty" z="9+8pLjx1jqyr3pJm0upIaVbsYvI="/>
+        </table:table>
+    </page:list>
+</div>

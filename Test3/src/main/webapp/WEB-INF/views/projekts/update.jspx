@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pl_sts_test3_domain_Projekt" modelAttribute="projekt" path="/projekts" versionField="Version" z="RhVTxHY8nyAV/LNYnTR1LgTveII=">
+        <field:textarea field="nazwa" id="c_pl_sts_test3_domain_Projekt_nazwa" required="true" z="BGXQwqitYV71lq7YA56CIjGniBo="/>
+        <field:datetime dateTimePattern="${projekt_termin_date_format}" field="termin" id="c_pl_sts_test3_domain_Projekt_termin" z="rHfEpL1Kzfzmq8sLqHI9oafGB4o="/>
+        <field:select field="partner" id="c_pl_sts_test3_domain_Projekt_partner" itemValue="id" items="${partners}" path="/partners" required="true" z="KW8QoapVDkIeafUdWmjcMXNR074="/>
+    </form:update>
+</div>

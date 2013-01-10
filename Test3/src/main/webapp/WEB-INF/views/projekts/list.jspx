@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pl_sts_test3_domain_Projekt" items="${projekts}" z="SwaRvIkQ+b+V6WZvHR7/RRUp0xA=">
+        <table:table data="${projekts}" id="l_pl_sts_test3_domain_Projekt" path="/projekts" z="H0016UHbo8QSKi532+lf48muuQA=">
+            <table:column id="c_pl_sts_test3_domain_Projekt_nazwa" property="nazwa" z="o6t8ntLsgcRnQRrx6xmSOBl6ZoY="/>
+            <table:column date="true" dateTimePattern="${projekt_termin_date_format}" id="c_pl_sts_test3_domain_Projekt_termin" property="termin" z="I/SaIZ/QFd+arX7WHQAJu24qPzk="/>
+            <table:column id="c_pl_sts_test3_domain_Projekt_partner" property="partner" z="G1gwS71Gf0sCv8u6jsqJT+Ti5Sc="/>
+        </table:table>
+    </page:list>
+</div>
