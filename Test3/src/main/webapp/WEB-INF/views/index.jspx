@@ -1,4 +1,4 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div xmlns:spring="http://www.springframework.org/tags" xmlns:kendo="http://www.kendoui.com/jsp/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
@@ -9,6 +9,7 @@
     </h3>
     <p>
       <spring:message code="welcome_text" />
+      <kendo:datePicker name="datePicker"></kendo:datePicker>
     </p>
   </util:panel>
 </div>

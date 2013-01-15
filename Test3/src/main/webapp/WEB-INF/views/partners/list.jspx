@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:kendo="http://www.kendoui.com/jsp/tags" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
+    
+	<kendo:grid name="productGrid" pageable="true" groupable="true" sortable="true" filterable="true">
+	    <kendo:grid-columns>
+	        <kendo:grid-column title="Nazwa" field="nazwa" />
+	        <kendo:grid-column title="Akcjonariusz" field="akcjonariusz"  />
+	        <kendo:grid-column title="Wartość" field="wartosc"/>
+	        <kendo:grid-column command="destroy" title="&amp;nbsp;" />
+	        <!--kendo:grid-column title="Projekty" field="projekty" /-->
+	    </kendo:grid-columns>
+	    <kendo:dataSource data="${partners}" pageSize="10" />
+	</kendo:grid>    
+    
     <page:list id="pl_pl_sts_test3_domain_Partner" items="${partners}" z="+wT1HzENTwlp21V5uFJyBzAxjkg=">
         <table:table data="${partners}" id="l_pl_sts_test3_domain_Partner" path="/partners" z="0uzZDRYmuwEYkYsBJ3QzAj6t5yY=">
             <table:column id="c_pl_sts_test3_domain_Partner_nazwa" property="nazwa" z="moJDR7vIHmdaNmC+dmqR3I5fZHw="/>
