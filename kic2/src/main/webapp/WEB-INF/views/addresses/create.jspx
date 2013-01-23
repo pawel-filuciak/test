@@ -3,12 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_innoenergy_kic2_domain_Address" modelAttribute="address" path="/addresses" render="${empty dependencies}" z="5M37OvBKwnkzI+80zS/h6xfmhAQ=">
-        <field:textarea field="address" id="c_com_innoenergy_kic2_domain_Address_address" z="e1m2UCtJcxtbIkzlaRMX++9qeFA="/>
-        <field:textarea field="city" id="c_com_innoenergy_kic2_domain_Address_city" z="9bns2hmC9s6Mm0zzfT+e/wdXK6I="/>
+        <field:input field="address" id="c_com_innoenergy_kic2_domain_Address_address" z="e1m2UCtJcxtbIkzlaRMX++9qeFA="/>
+        <field:input field="city" id="c_com_innoenergy_kic2_domain_Address_city" z="9bns2hmC9s6Mm0zzfT+e/wdXK6I="/>
         <field:input field="zipCode" id="c_com_innoenergy_kic2_domain_Address_zipCode" max="20" z="1x/GcfiozxU3kSL8fERU0EGuGd4="/>
-        <field:textarea field="latitude" id="c_com_innoenergy_kic2_domain_Address_latitude" z="6BM6JN4xAYimXBIJKeFEYv9LwX8="/>
-        <field:textarea field="longitude" id="c_com_innoenergy_kic2_domain_Address_longitude" z="cu7tlynZWgZQhRjQr6tGVLRmbYY="/>
-        <field:textarea field="comment" id="c_com_innoenergy_kic2_domain_Address_comment" z="oaVIss3zNXRI+rsnSPusMcow5GY="/>
+        <field:input field="latitude" id="c_com_innoenergy_kic2_domain_Address_latitude" z="6BM6JN4xAYimXBIJKeFEYv9LwX8="/>
+        <field:input field="longitude" id="c_com_innoenergy_kic2_domain_Address_longitude" z="cu7tlynZWgZQhRjQr6tGVLRmbYY="/>
+        <field:input field="comment" id="c_com_innoenergy_kic2_domain_Address_comment" z="oaVIss3zNXRI+rsnSPusMcow5GY="/>
         <field:select field="country" id="c_com_innoenergy_kic2_domain_Address_country" itemValue="id" items="${countrys}" path="/countrys" z="wlB0tKT+3DGDr8aVy3mRlEZBddA="/>
         <field:select field="firm" id="c_com_innoenergy_kic2_domain_Address_firm" itemValue="id" items="${firms}" path="/firms" required="true" z="Ujb7ukv1TiEBrLfv3O1TVSt4DJM="/>
     </form:create>

@@ -6,11 +6,13 @@
     </definition>
 <definition extends="default" name="organizationtypes/show">
         <put-attribute name="body" value="/WEB-INF/views/organizationtypes/show.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/organizationtypes/accordion.jspx" />
     </definition>
 <definition extends="default" name="organizationtypes/create">
         <put-attribute name="body" value="/WEB-INF/views/organizationtypes/create.jspx"/>
     </definition>
 <definition extends="default" name="organizationtypes/update">
         <put-attribute name="body" value="/WEB-INF/views/organizationtypes/update.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/organizationtypes/accordion.jspx" />
     </definition>
 </tiles-definitions>

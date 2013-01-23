@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_innoenergy_kic2_domain_KicUnit" modelAttribute="kicUnit" path="/kicunits" versionField="Version" z="Y9Q7dZd37Gki1HaD/q9sjU3oAVo=">
-        <field:textarea field="name" id="c_com_innoenergy_kic2_domain_KicUnit_name" z="7517eRoOGT2eJGW77y+c/vesgGc="/>
+        <field:input field="name" id="c_com_innoenergy_kic2_domain_KicUnit_name" z="7517eRoOGT2eJGW77y+c/vesgGc="/>
     </form:update>
 </div>

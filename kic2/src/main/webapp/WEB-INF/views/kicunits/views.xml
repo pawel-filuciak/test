@@ -6,11 +6,13 @@
     </definition>
 <definition extends="default" name="kicunits/show">
         <put-attribute name="body" value="/WEB-INF/views/kicunits/show.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/kicunits/accordion.jspx" />
     </definition>
 <definition extends="default" name="kicunits/create">
         <put-attribute name="body" value="/WEB-INF/views/kicunits/create.jspx"/>
     </definition>
 <definition extends="default" name="kicunits/update">
         <put-attribute name="body" value="/WEB-INF/views/kicunits/update.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/kicunits/accordion.jspx" />
     </definition>
 </tiles-definitions>

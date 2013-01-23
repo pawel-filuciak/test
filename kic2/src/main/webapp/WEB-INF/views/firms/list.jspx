@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:kendo="http://www.kendoui.com/jsp/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_com_innoenergy_kic2_domain_Firm" items="${firms}" z="3BOFGOyszCE9HVsmf5B+Nk3v/dU=">
-        <table:table data="${firms}" id="l_com_innoenergy_kic2_domain_Firm" path="/firms" z="/3HdTW6JxCdeKkFSJtrzOJ2sasg=">
-            <table:column id="c_com_innoenergy_kic2_domain_Firm_fullName" property="fullName" z="8A3zlL+jIeou+PN+yujzWXVXcCc="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Firm_shortName" property="shortName" z="aISptIntMgqTzdImzntYA1QNtL4="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Firm_vatNumber" property="vatNumber" z="bHEFyoH7u8udhqUCObOFsHzhVwE="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Firm_officialName" property="officialName" z="jjdhYvO9w88S218hOZlKpZ0hztQ="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Firm_officialNameEnglish" property="officialNameEnglish" z="/QAqhR6RzR+6y3PLPGNHyr/AM2s="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Firm_comment" property="comment" z="YBHRVwC8Czjr9aDqLO+U33y5myM="/>
-        </table:table>
-    </page:list>
+    
+	<spring:url value="/firms" var="readUrl"/>
+    <kendo:grid filterable="true" groupable="true" name="productGrid" pageable="true" sortable="true">
+        <kendo:grid-columns>
+            <kendo:grid-column field="fullName"/>
+            <kendo:grid-column field="shortName"/>
+            <kendo:grid-column field="vatNumber"/>
+            <kendo:grid-column field="officialName"/>
+            <kendo:grid-column field="officialNameEnglish"/>
+        </kendo:grid-columns>
+        <kendo:dataSource pageSize="10">
+            <kendo:dataSource-schema>
+                <kendo:dataSource-schema-model>
+                    <kendo:dataSource-schema-model-fields>
+                        <kendo:dataSource-schema-model-field name="fullName" type="string"/>
+                        <kendo:dataSource-schema-model-field name="shortName" type="string"/>
+                        <kendo:dataSource-schema-model-field name="vatNumber" type="string"/>
+                        <kendo:dataSource-schema-model-field name="officialName" type="string"/>
+                        <kendo:dataSource-schema-model-field name="officialNameEnglish" type="string"/>
+                    </kendo:dataSource-schema-model-fields>
+                </kendo:dataSource-schema-model>
+            </kendo:dataSource-schema>
+            <kendo:dataSource-transport>
+                <kendo:dataSource-transport-read url="${readUrl}"/>
+            </kendo:dataSource-transport>
+        </kendo:dataSource>
+    </kendo:grid>    
+
 </div>

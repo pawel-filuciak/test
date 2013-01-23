@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:kendo="http://www.kendoui.com/jsp/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_com_innoenergy_kic2_domain_KicUnit" items="${kicunits}" z="NNR8ldDhfaWe2Mtpy5gyGUoTyOc=">
-        <table:table data="${kicunits}" id="l_com_innoenergy_kic2_domain_KicUnit" path="/kicunits" z="GK8F34fEcFs92c1z2foLusTDAI4=">
-            <table:column id="c_com_innoenergy_kic2_domain_KicUnit_name" property="name" z="1VwjZxku9czFeon2sfDO3NXQXKI="/>
-        </table:table>
-    </page:list>
+    
+	<spring:url value="/kicunits" var="readUrl"/>
+    <kendo:grid filterable="true" groupable="true" name="productGrid" pageable="true" sortable="true">
+        <kendo:grid-columns>
+            <kendo:grid-column field="name"/>
+        </kendo:grid-columns>
+        <kendo:dataSource pageSize="10">
+            <kendo:dataSource-schema>
+                <kendo:dataSource-schema-model>
+                    <kendo:dataSource-schema-model-fields>
+                        <kendo:dataSource-schema-model-field name="name" type="string"/>
+                    </kendo:dataSource-schema-model-fields>
+                </kendo:dataSource-schema-model>
+            </kendo:dataSource-schema>
+            <kendo:dataSource-transport>
+                <kendo:dataSource-transport-read url="${readUrl}"/>
+            </kendo:dataSource-transport>
+        </kendo:dataSource>
+    </kendo:grid>
+
 </div>

@@ -6,11 +6,14 @@
     </definition>
 <definition extends="default" name="partners/show">
         <put-attribute name="body" value="/WEB-INF/views/partners/show.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
     </definition>
 <definition extends="default" name="partners/create">
         <put-attribute name="body" value="/WEB-INF/views/partners/create.jspx"/>
     </definition>
-<definition extends="default" name="partners/update">
+    
+	<definition extends="default" name="partners/update">
         <put-attribute name="body" value="/WEB-INF/views/partners/update.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
     </definition>
 </tiles-definitions>

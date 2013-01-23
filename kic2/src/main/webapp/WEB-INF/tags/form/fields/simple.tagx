@@ -21,6 +21,7 @@
         <c:out value="${label}" />
         :
       </label>
+      <div class="input">
       <c:choose>
         <c:when test="${not empty messageCode}">
           <spring:message code="${messageCode}" arguments="${messageCodeAttribute}" />
@@ -29,7 +30,9 @@
           <spring:eval expression="text" />
         </c:otherwise>
       </c:choose>
+      </div>
+      <div class="clear">&#160;</div>
     </div>
-    <br />
+
   </c:if>
 </jsp:root>

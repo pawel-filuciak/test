@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_innoenergy_kic2_domain_KicUnit" modelAttribute="kicUnit" path="/kicunits" render="${empty dependencies}" z="hng2fasfPiQ1/Km1ZE8iOT8+tpM=">
-        <field:textarea field="name" id="c_com_innoenergy_kic2_domain_KicUnit_name" z="7517eRoOGT2eJGW77y+c/vesgGc="/>
+        <field:input field="name" id="c_com_innoenergy_kic2_domain_KicUnit_name" z="7517eRoOGT2eJGW77y+c/vesgGc="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_innoenergy_kic2_domain_KicUnit" render="${not empty dependencies}" z="lOwb7Uaky65hkZou3sun8jQO3yM="/>
 </div>

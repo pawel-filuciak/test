@@ -3,12 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_innoenergy_kic2_domain_Firm" modelAttribute="firm" path="/firms" render="${empty dependencies}" z="aY/PlqYb0dRBAZWQXbpdLsbYjRU=">
-        <field:textarea field="fullName" id="c_com_innoenergy_kic2_domain_Firm_fullName" required="true" z="GBCLsNW7oDXX2Fr7JBHEEac3UxA="/>
-        <field:textarea field="shortName" id="c_com_innoenergy_kic2_domain_Firm_shortName" required="true" z="cMaznlNAAn0b3sPNHBY15QdEhy0="/>
-        <field:textarea field="vatNumber" id="c_com_innoenergy_kic2_domain_Firm_vatNumber" z="MD8S3uXvIOHOzQmLj8Ea1Eeqrl8="/>
-        <field:textarea field="officialName" id="c_com_innoenergy_kic2_domain_Firm_officialName" z="NOWMbd3JLWJu4NOyyoDQRwZAz/c="/>
-        <field:textarea field="officialNameEnglish" id="c_com_innoenergy_kic2_domain_Firm_officialNameEnglish" z="16CFBP+Mm6kU31WpGUwXqzOP/WM="/>
-        <field:textarea field="comment" id="c_com_innoenergy_kic2_domain_Firm_comment" z="6N7vdlu9alDVZu3AUrgKQ7mNnkI="/>
+        <field:input field="fullName" id="c_com_innoenergy_kic2_domain_Firm_fullName" required="true" z="GBCLsNW7oDXX2Fr7JBHEEac3UxA="/>
+        <field:input field="shortName" id="c_com_innoenergy_kic2_domain_Firm_shortName" required="true" z="cMaznlNAAn0b3sPNHBY15QdEhy0="/>
+        <field:input field="vatNumber" id="c_com_innoenergy_kic2_domain_Firm_vatNumber" z="MD8S3uXvIOHOzQmLj8Ea1Eeqrl8="/>
+        <field:input field="officialName" id="c_com_innoenergy_kic2_domain_Firm_officialName" z="NOWMbd3JLWJu4NOyyoDQRwZAz/c="/>
+        <field:input field="officialNameEnglish" id="c_com_innoenergy_kic2_domain_Firm_officialNameEnglish" z="16CFBP+Mm6kU31WpGUwXqzOP/WM="/>
+        <field:input field="comment" id="c_com_innoenergy_kic2_domain_Firm_comment" z="6N7vdlu9alDVZu3AUrgKQ7mNnkI="/>
         <field:select field="organizationType" id="c_com_innoenergy_kic2_domain_Firm_organizationType" itemValue="id" items="${organizationtypes}" path="/organizationtypes" z="XzJD+2mR2oHffJ7esH2mE9w66g8="/>
         <field:select field="tradeStyle" id="c_com_innoenergy_kic2_domain_Firm_tradeStyle" itemValue="id" items="${tradestyles}" path="/tradestyles" z="onqhNv2L1asGQ7HaPVVMAKp9ENo="/>
         <field:select field="kicUnit" id="c_com_innoenergy_kic2_domain_Firm_kicUnit" itemValue="id" items="${kicunits}" path="/kicunits" z="uCxRT3K3OdtVaMGgVQJ7l7M3+qU="/>

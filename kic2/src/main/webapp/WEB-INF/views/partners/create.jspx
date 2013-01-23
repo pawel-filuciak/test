@@ -3,16 +3,16 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_innoenergy_kic2_domain_Partner" modelAttribute="partner" path="/partners" render="${empty dependencies}" z="NFuSribHOLe7GZdtejmJUdwM9wc=">
-        <field:textarea field="fullName" id="c_com_innoenergy_kic2_domain_Partner_fullName" required="true" z="L536UDykXCEIY5+JU5OjhFbgPwE="/>
-        <field:textarea field="shortName" id="c_com_innoenergy_kic2_domain_Partner_shortName" required="true" z="ovpvdp3Gi8Jrwl2q4wTkjJtkfzY="/>
-        <field:textarea field="vatNumber" id="c_com_innoenergy_kic2_domain_Partner_vatNumber" z="oNg8JDFeTvNniiKsLQFoE1pkRd8="/>
-        <field:textarea field="officialName" id="c_com_innoenergy_kic2_domain_Partner_officialName" z="uTLK9PcEBGzQD8xE7flgHHTcRyA="/>
-        <field:textarea field="officialNameEnglish" id="c_com_innoenergy_kic2_domain_Partner_officialNameEnglish" z="QXQglafPR7EoqzaKr8cC/ipcU3E="/>
-        <field:textarea field="comment" id="c_com_innoenergy_kic2_domain_Partner_comment" z="DTat6YOJOCdeaNHjbKcjFtq4ng0="/>
+        <field:input field="fullName" id="c_com_innoenergy_kic2_domain_Partner_fullName" required="true" z="user-managed"/>
+        <field:input field="shortName" id="c_com_innoenergy_kic2_domain_Partner_shortName" required="true" z="user-managed"/>
+        <field:input field="vatNumber" id="c_com_innoenergy_kic2_domain_Partner_vatNumber" z="user-managed"/>
+        <field:input field="officialName" id="c_com_innoenergy_kic2_domain_Partner_officialName" z="user-managed"/>
+        <field:input field="officialNameEnglish" id="c_com_innoenergy_kic2_domain_Partner_officialNameEnglish" z="user-managed"/>
+        <field:input field="comment" id="c_com_innoenergy_kic2_domain_Partner_comment" z="user-managed"/>
         <field:input field="indirectCostPercentage" id="c_com_innoenergy_kic2_domain_Partner_indirectCostPercentage" validationMessageCode="field_invalid_number" z="GwHSrmpKmq9q2YzipUAuZ8Ib0vQ="/>
-        <field:textarea field="pic" id="c_com_innoenergy_kic2_domain_Partner_pic" z="LVjAzm9s3NeeDNDAMJbn3ezRJNY="/>
-        <field:textarea field="dunsNumber" id="c_com_innoenergy_kic2_domain_Partner_dunsNumber" z="uXM2nm/sHpMDns8kW4XO1yCx9cI="/>
-        <field:textarea field="eitNumber" id="c_com_innoenergy_kic2_domain_Partner_eitNumber" z="rhfhaoqzhLVeC9DGfC0ihUQldh4="/>
+        <field:input field="pic" id="c_com_innoenergy_kic2_domain_Partner_pic" z="user-managed"/>
+        <field:input field="dunsNumber" id="c_com_innoenergy_kic2_domain_Partner_dunsNumber" z="user-managed"/>
+        <field:input field="eitNumber" id="c_com_innoenergy_kic2_domain_Partner_eitNumber" z="user-managed"/>
         <field:datetime dateTimePattern="${partner_eligibilitydate_date_format}" field="eligibilityDate" id="c_com_innoenergy_kic2_domain_Partner_eligibilityDate" z="MdslDkqvNa20HHqUsOvt8KhLB1M="/>
         <field:checkbox field="eligibleForEIT" id="c_com_innoenergy_kic2_domain_Partner_eligibleForEIT" z="E3uUXR+xCBdFxO5vjfncIcyQSNk="/>
         <field:checkbox field="gpaSigned" id="c_com_innoenergy_kic2_domain_Partner_gpaSigned" z="Y6A1ch0LLQpbjhleDqMFf1Zogwk="/>

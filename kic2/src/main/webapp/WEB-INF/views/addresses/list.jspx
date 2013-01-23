@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:kendo="http://www.kendoui.com/jsp/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_com_innoenergy_kic2_domain_Address" items="${addresses}" z="DM+J02Vb2U7i6WgloAYsKHKJzT4=">
-        <table:table data="${addresses}" id="l_com_innoenergy_kic2_domain_Address" path="/addresses" z="p3+Pd20Ei+U8bMFj4LxiRCAuYRs=">
-            <table:column id="c_com_innoenergy_kic2_domain_Address_address" property="address" z="Nu7Drd/jP/vHNtBt8VINi7J0CEE="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Address_city" property="city" z="qgsnR6uId07f9IGND5vP1vyeuXY="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Address_zipCode" property="zipCode" z="Z1mmecDMQHFKUTM5YAN04mmbw54="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Address_latitude" property="latitude" z="ccuZ/fp6GsbtNnmebBAVwXVpV+Q="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Address_longitude" property="longitude" z="V5KjCuQB4b/0F/33rXE0uVZQR6o="/>
-            <table:column id="c_com_innoenergy_kic2_domain_Address_comment" property="comment" z="JdACfqxGZvAvp0TNruEHJER/ffc="/>
-        </table:table>
-    </page:list>
+
+	<spring:url value="/addresses" var="readUrl"/>
+    <kendo:grid filterable="true" groupable="true" name="productGrid" pageable="true" sortable="true">
+        <kendo:grid-columns>
+            <kendo:grid-column field="address"/>
+            <kendo:grid-column field="city"/>
+            <kendo:grid-column field="zipCode"/>
+            <kendo:grid-column field="latitude"/>
+            <kendo:grid-column field="longitude"/>
+        </kendo:grid-columns>
+        <kendo:dataSource pageSize="10">
+            <kendo:dataSource-schema>
+                <kendo:dataSource-schema-model>
+                    <kendo:dataSource-schema-model-fields>
+                        <kendo:dataSource-schema-model-field name="address" type="string"/>
+                        <kendo:dataSource-schema-model-field name="city" type="string"/>
+                        <kendo:dataSource-schema-model-field name="zipCode" type="string"/>
+                        <kendo:dataSource-schema-model-field name="latitude" type="string"/>
+                        <kendo:dataSource-schema-model-field name="longitude" type="string"/>
+                    </kendo:dataSource-schema-model-fields>
+                </kendo:dataSource-schema-model>
+            </kendo:dataSource-schema>
+            <kendo:dataSource-transport>
+                <kendo:dataSource-transport-read url="${readUrl}"/>
+            </kendo:dataSource-transport>
+        </kendo:dataSource>
+    </kendo:grid>    
+
 </div>

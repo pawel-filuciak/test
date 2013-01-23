@@ -6,11 +6,13 @@
     </definition>
 <definition extends="default" name="countrys/show">
         <put-attribute name="body" value="/WEB-INF/views/countrys/show.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/countrys/accordion.jspx" />
     </definition>
 <definition extends="default" name="countrys/create">
         <put-attribute name="body" value="/WEB-INF/views/countrys/create.jspx"/>
     </definition>
 <definition extends="default" name="countrys/update">
         <put-attribute name="body" value="/WEB-INF/views/countrys/update.jspx"/>
+        <put-attribute name="accordion" value="/WEB-INF/views/countrys/accordion.jspx" />
     </definition>
 </tiles-definitions>

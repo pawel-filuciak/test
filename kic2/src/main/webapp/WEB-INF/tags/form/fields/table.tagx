@@ -35,39 +35,41 @@
     </c:if>
 
     <spring:message var="typeName" code="menu_item_${fn:toLowerCase(fn:split(id,'_')[fn:length(fn:split(id,'_')) - 1])}_new_label" htmlEscape="false" />
-    <c:set var="lengths" value="${fn:split(columnMaxLengths, '&#9999;')}" scope="request" />
-    <c:set var="types" value="${fn:split(columnTypes, '&#9999;')}" scope="request" />
-    <c:set var="patterns" value="${fn:split(columnDatePatterns, '&#9999;')}" scope="request" />
-
+    <c:set var="lengths" value="${fn:split(columnMaxLengths, ',')}" scope="request" />
+    <c:set var="types" value="${fn:split(columnTypes, ',')}" scope="request" />
+    <c:set var="patterns" value="${fn:split(columnDatePatterns, ',')}" scope="request" />
+    <c:set var="tooltips" value="${fn:split(columnTooltips, ',')}" scope="request" />
+	
     <spring:eval var="colCounter" expression="1" />
-
-    <table>
+    
+    <table class="zebra-striped">
       <thead>
         <tr>
-          <c:forTokens items="${columnLabels}" delims="${'&#9999;'}" var="columnHeading">
-            <th>
+          <c:forTokens items="${columnLabels}" delims="," var="columnHeading">
+            <th class="blue header">
               <c:out value="${columnHeading}" />
               <spring:eval var="colCounter" expression="colCounter  + 1" />
             </th>
           </c:forTokens>
-          <th></th>
+          <th class="blue header"></th>
           <c:if test="${update}">
-            <th></th>
+            <th class="blue header"></th>
             <spring:eval var="colCounter" expression="colCounter  + 1" />
           </c:if>
           <c:if test="${delete}">
-            <th></th>
+            <th class="blue header"></th>
             <spring:eval var="colCounter" expression="colCounter  + 1" />
           </c:if>
         </tr>
       </thead>
       <c:forEach items="${data}" var="item">
         <tr>
-          <c:forTokens items="${columnProperties}" delims="${'&#9999;'}" var="column" varStatus="num">
+          <c:forTokens items="${columnProperties}" delims="," var="column" varStatus="num">
             <c:set var="columnMaxLength" value="${lengths[num.count-1]}" />
             <c:set var="columnType" value="${types[num.count-1]}" />
             <c:set var="columnDatePattern" value="${patterns[num.count-1]}" />
-            <td>
+            <c:set var="columnTooltip" value="${tooltips[num.count-1]}" />
+            <td title="${item[columnTooltip]}">
               <c:choose>
                 <c:when test="${columnType eq 'date'}">
                   <spring:escapeBody>
@@ -86,44 +88,58 @@
                 </c:otherwise>
               </c:choose>
               <c:if test="${columnMaxLength ge 0}">
-                <c:set value="${fn:substring(colTxt, 0, columnMaxLength)}" var="colTxt" />
+                <!-- <c:set value="${fn:substring(colTxt, 0, columnMaxLength)}" var="colTxt" />-->
+                <c:set value="${colTxt}" var="colTxt" />
               </c:if>
               <c:out value="${colTxt}" />
             </td>
           </c:forTokens>
           <c:set var="itemId"><spring:eval expression="item[typeIdFieldName]"/></c:set>
-          <td class="utilbox">
+          <td>
             <spring:url value="${path}/${itemId}" var="show_form_url" />
             <spring:url value="/resources/images/show.png" var="show_image_url" />
             <spring:message arguments="${typeName}" code="entity_show" var="show_label" htmlEscape="false" />
-            <a href="${show_form_url}" alt="${fn:escapeXml(show_label)}" title="${fn:escapeXml(show_label)}">
-              <img alt="${fn:escapeXml(show_label)}" class="image" src="${show_image_url}" title="${fn:escapeXml(show_label)}" />
+            <a href="${fn:escapeXml(show_form_url)}" alt="${fn:escapeXml(show_label)}" title="${fn:escapeXml(show_label)}" class="label warning">
+              ${fn:substring(show_label, 0, 1)}
             </a>
           </td>
           <c:if test="${update}">
-            <td class="utilbox">
+            <td>
               <spring:url value="${path}/${itemId}" var="update_form_url">
                 <spring:param name="form" />
               </spring:url>
               <spring:url value="/resources/images/update.png" var="update_image_url" />
               <spring:message arguments="${typeName}" code="entity_update" var="update_label" htmlEscape="false" />
-              <a href="${update_form_url}" alt="${fn:escapeXml(update_label)}" title="${fn:escapeXml(update_label)}">
-                <img alt="${fn:escapeXml(update_label)}" class="image" src="${update_image_url}" title="${fn:escapeXml(update_label)}" />
+              <a href="${fn:escapeXml(update_form_url)}" alt="${fn:escapeXml(update_label)}" title="${fn:escapeXml(update_label)}" class="label notice">
+                ${fn:substring(update_label, 0, 1)}
               </a>
             </td>
           </c:if>
           <c:if test="${delete}">
-            <td class="utilbox">
+            <td>
               <spring:url value="${path}/${itemId}" var="delete_form_url" />
-              <spring:url value="/resources/images/delete.png" var="delete_image_url" />
-              <form:form action="${delete_form_url}" method="DELETE">
+              <form:form id="commandDelete${itemId}" name="commandDelete" action="${fn:escapeXml(delete_form_url)}" method="DELETE" cssClass="delete">
                 <spring:message arguments="${typeName}" code="entity_delete" var="delete_label" htmlEscape="false" />
                 <c:set var="delete_confirm_msg">
                   <spring:escapeBody javaScriptEscape="true">
                     <spring:message code="entity_delete_confirm" />
                   </spring:escapeBody>
                 </c:set>
-                <input alt="${fn:escapeXml(delete_label)}" class="image" src="${delete_image_url}" title="${fn:escapeXml(delete_label)}" type="image" value="${fn:escapeXml(delete_label)}" onclick="return confirm('${delete_confirm_msg}');" />
+                
+                <a id="removeLink${itemId}" href="#" alt="${fn:escapeXml(delete_label)}" title="${fn:escapeXml(delete_label)}" class="label important">
+                  ${fn:substring(delete_label, 0, 1)}
+              	</a>
+              	
+              	<script type="text/javascript">
+				  $(document).ready(function(){
+					  $("#removeLink${itemId}").click(function() {
+						  $('#commandDelete${itemId}').submit();
+				      });
+					  
+				  });
+				</script>
+                
+                
                 <c:if test="${not empty param.page}">
                   <input name="page" type="hidden" value="1" />
                 </c:if>
@@ -138,17 +154,16 @@
       <tr class="footer">
         <td colspan="${colCounter}">
           <c:if test="${empty create or create}">
-            <span class="new">
+            <span>
               <spring:url value="${path}" var="create_url">
                 <spring:param name="form" />
               </spring:url>
-              <a href="${create_url}">
-                <spring:url value="/resources/images/add.png" var="create_img_url" />
-                <spring:message arguments="${typeName}" code="global_menu_new" var="add_message" htmlEscape="false" />
-                <img alt="${fn:escapeXml(add_message)}" src="${create_img_url}" title="${fn:escapeXml(add_message)}" />
+              <spring:message arguments="${typeName}" code="global_menu_new" var="add_message" htmlEscape="false" />
+              <a href="${fn:escapeXml(create_url)}" class="label success" title="${add_message}">
+                ${fn:substring(add_message, 0, 1)}
               </a>
             </span>
-            <c:out value=" " />
+            <c:out value="| " />
           </c:if>
           <c:if test="${not empty maxPages}">
             <util:pagination maxPages="${maxPages}" page="${param.page}" size="${param.size}" />
