@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_innoenergy_kic2_domain_Partner" object="${partner}" path="/partners" z="YEyTmcF6oTFgSRsn4vsFPyfl7cQ=">
+        <field:display field="fullName" id="s_com_innoenergy_kic2_domain_Partner_fullName" object="${partner}" z="B2OIzSaxXmHUc71Eg7V6A1G4yKs="/>
+        <field:display field="shortName" id="s_com_innoenergy_kic2_domain_Partner_shortName" object="${partner}" z="LQ2cX2gg7frDBJBHCkWwhKzyO6g="/>
+        <field:display field="vatNumber" id="s_com_innoenergy_kic2_domain_Partner_vatNumber" object="${partner}" z="Iv664Z0CSOIf7CC42vdXM9zENCo="/>
+        <field:display field="officialName" id="s_com_innoenergy_kic2_domain_Partner_officialName" object="${partner}" z="hbEXexbBPpJC1bhcn1Z6dBf97XM="/>
+        <field:display field="officialNameEnglish" id="s_com_innoenergy_kic2_domain_Partner_officialNameEnglish" object="${partner}" z="FveuOszOgS0geMwuGbGyh5vCMGU="/>
+        <field:display field="comment" id="s_com_innoenergy_kic2_domain_Partner_comment" object="${partner}" z="3d0Nkr1ItI+W8lTaANWqIVFfzfU="/>
+        <field:display field="indirectCostPercentage" id="s_com_innoenergy_kic2_domain_Partner_indirectCostPercentage" object="${partner}" z="AvOb96zczP7xpVuYR9U8IJACD/o="/>
+        <field:display field="pic" id="s_com_innoenergy_kic2_domain_Partner_pic" object="${partner}" z="61RnIIX/a1ztET6e44z8S0w1IxA="/>
+        <field:display field="dunsNumber" id="s_com_innoenergy_kic2_domain_Partner_dunsNumber" object="${partner}" z="T1oMVKjafeT3mb+aCeF4gIs/lUQ="/>
+        <field:display field="eitNumber" id="s_com_innoenergy_kic2_domain_Partner_eitNumber" object="${partner}" z="VvWDE5M/Kk/PKatdb51ESfjJogc="/>
+        <field:display calendar="true" dateTimePattern="${partner_eligibilitydate_date_format}" field="eligibilityDate" id="s_com_innoenergy_kic2_domain_Partner_eligibilityDate" object="${partner}" z="WtDcLSHtreVst19iWHT73f+igFc="/>
+        <field:display field="eligibleForEIT" id="s_com_innoenergy_kic2_domain_Partner_eligibleForEIT" object="${partner}" z="l4Cq1fjYMipho/ndc7c+bxMudC0="/>
+        <field:display field="gpaSigned" id="s_com_innoenergy_kic2_domain_Partner_gpaSigned" object="${partner}" z="r/2CQ7qi86k0RVrmnlRT6/Fhvkg="/>
+        <field:display field="shareHolder" id="s_com_innoenergy_kic2_domain_Partner_shareHolder" object="${partner}" z="lv0ZI6UqvWlF6R4dyxvtrCsZuVY="/>
+        <field:display field="internalAgreement" id="s_com_innoenergy_kic2_domain_Partner_internalAgreement" object="${partner}" z="eeOoNJKQ9m15WzCPV2ghcVG4lcs="/>
+        <field:display field="declarationOfHonour" id="s_com_innoenergy_kic2_domain_Partner_declarationOfHonour" object="${partner}" z="lYQg95oFM3wPk0JhH/nhDpkaDAA="/>
+        <field:display field="legalInformationForm" id="s_com_innoenergy_kic2_domain_Partner_legalInformationForm" object="${partner}" z="hct7o6W1Ahp7oENBHe/kOTnajcM="/>
+        <field:display field="cfs" id="s_com_innoenergy_kic2_domain_Partner_cfs" object="${partner}" z="EoSYF+TfY7mZgAmxiZo1oyEpi5I="/>
+        <field:display field="organizationType" id="s_com_innoenergy_kic2_domain_Partner_organizationType" object="${partner}" z="zwerLctq37+JQqAyVDUWnZHiP/g="/>
+        <field:display field="tradeStyle" id="s_com_innoenergy_kic2_domain_Partner_tradeStyle" object="${partner}" z="knmlZBecZLAdc8fKkdy37FSoQ74="/>
+        <field:display field="kicUnit" id="s_com_innoenergy_kic2_domain_Partner_kicUnit" object="${partner}" z="gImLb/ZRcH8Wama5DFHPXjSvlT0="/>
+    </page:show>
+</div>

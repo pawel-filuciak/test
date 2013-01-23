@@ -40,6 +40,12 @@
       <br />
       <form:errors cssClass="errors" id="_${sec_field}_error_id" path="${sec_field}" />
       <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_${sec_field}_id', widgetType : 'dijit.form.SimpleTextarea', widgetAttrs : {disabled : ${disabled}}})); </script>
+        <script>
+            $(document).ready(function() {
+                // create Editor from textarea HTML element with default set of tools
+                $("#_${sec_field}_id").kendoEditor();
+            });
+        </script>      
     </div>
     <br />
 

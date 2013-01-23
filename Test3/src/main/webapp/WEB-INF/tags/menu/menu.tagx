@@ -9,5 +9,10 @@
 		<ul id="${fn:escapeXml(id)}">
 			<jsp:doBody />
 		</ul>
+	    <SCRIPT type="text/javascript">
+	    $(document).ready(function() {	    	
+	        $("#${fn:escapeXml(id)}").kendoMenu();
+	    });    
+	    </SCRIPT>		
 	</c:if>
 </jsp:root>

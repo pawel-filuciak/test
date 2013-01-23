@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_innoenergy_kic2_domain_OrganizationType" items="${organizationtypes}" z="BfEUkRrmb80Te7sn4D1FyvsQPmo=">
+        <table:table data="${organizationtypes}" id="l_com_innoenergy_kic2_domain_OrganizationType" path="/organizationtypes" z="cp2qm0WzAPbIU/hOKTS3efuZyGM=">
+            <table:column id="c_com_innoenergy_kic2_domain_OrganizationType_name" property="name" z="BuwvCbwEyJrRqnOjIBRZPPD0HVk="/>
+        </table:table>
+    </page:list>
+</div>

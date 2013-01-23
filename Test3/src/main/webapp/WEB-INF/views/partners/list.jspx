@@ -11,7 +11,20 @@
 	        <kendo:grid-column command="destroy" title="&amp;nbsp;" />
 	        <!--kendo:grid-column title="Projekty" field="projekty" /-->
 	    </kendo:grid-columns>
-	    <kendo:dataSource data="${partners}" pageSize="10" />
+        <kendo:dataSource pageSize="10">
+             <kendo:dataSource-schema>
+                <kendo:dataSource-schema-model>
+                    <kendo:dataSource-schema-model-fields>
+                        <kendo:dataSource-schema-model-field name="nazwa" type="string" />
+                        <kendo:dataSource-schema-model-field name="akcjonariusz" type="boolean" />
+                        <kendo:dataSource-schema-model-field name="wartosc" type="number" />
+                    </kendo:dataSource-schema-model-fields>
+                </kendo:dataSource-schema-model>
+            </kendo:dataSource-schema>
+            <kendo:dataSource-transport>
+                <kendo:dataSource-transport-read url="/Test3/partners"/>
+            </kendo:dataSource-transport>
+        </kendo:dataSource>	    
 	</kendo:grid>    
     
     <page:list id="pl_pl_sts_test3_domain_Partner" items="${partners}" z="+wT1HzENTwlp21V5uFJyBzAxjkg=">

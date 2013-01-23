@@ -1,0 +1,82 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-22 11:32:08
+project --topLevelPackage com.innoenergy.kic2 --projectName kic2 --java 6 --packaging WAR
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-22 11:32:10
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-22 11:33:37
+hint
+jpa setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE
+hint
+entity jpa --class ~.domain.Firm --testAutomatically
+hint
+field string --fieldName fullName --notNull --sizeMax 200
+field string --fieldName shortName --notNull --sizeMax 100
+field string --fieldName vatNumber --sizeMax 50
+field string --fieldName officialName --sizeMax 200
+field string --fieldName officialNameEnglish --sizeMax 200
+entity jpa --class ~.domain.Partner --extends ~.domain.Firm --testAutomatically 
+field number --type java.lang.Double --fieldName indirectCostPercentage
+field string --fieldName pic --sizeMax 100
+field string --fieldName dunsNumber --sizeMax 100
+focus --class ~.domain.Firm
+field string --fieldName comment --sizeMax 500
+focus --class ~.domain.Partner
+field string --fieldName eitNumber --sizeMax 100
+field date --type java.util.Calendar --fieldName eligibilityDate
+field boolean --fieldName eligibleForEIT
+field boolean --fieldName gpaSigned
+field boolean --fieldName shareHolder
+field boolean --fieldName internalAgreement
+field boolean --fieldName declarationOfHonour
+field boolean --fieldName legalInformationForm
+field boolean --fieldName cfs
+entity jpa --class ~.domain.OrganizationType --testAutomatically 
+field string --fieldName name --sizeMax 200
+focus --class ~.domain.Firm
+field reference --type ~.domain.OrganizationType --fieldName organizationType
+perform tests
+web mvc setup
+web mvc all --package ~.web
+perform package
+entity jpa --class ~.domain.TradeStyle --testAutomatically 
+field string --fieldName name --sizeMax 200
+focus --class ~.domain.Firm
+field reference --type ~.domain.TradeStyle --fieldName tradeStyle
+entity jpa --class ~.domain.KicUnit --testAutomatically 
+field string --fieldName name --sizeMax 200
+focus --class ~.domain.Firm
+field reference --type ~.domain.KicUnit --fieldName kicUnit
+entity jpa --class ~.domain.Address --testAutomatically 
+field string --fieldName address --sizeMax 100
+field string --fieldName city --sizeMax 100
+field string --fieldName zipCode --sizeMax 20
+field string --fieldName latitude --sizeMax 100
+field string --fieldName longitude --sizeMax 100
+field string --fieldName comment --sizeMax 500
+entity jpa --class ~.domain.Country --testAutomatically 
+field string --fieldName name --sizeMax 200
+focus --class ~.domain.Address
+field reference --type ~.domain.Country --fieldName country
+perform package
+web mvc all --package ~.web
+perform package
+focus --class ~.domain.Address
+field reference --type ~.domain.Firm --fieldName firm
+focus --class ~.domain.Firm
+field set --type ~.domain.Address --fieldName addreses --cardinality ONE_TO_MANY
+web mvc all --package ~.web
+web mvc all --package ~.web
+web mvc all --package ~.web
+perform package
+web mvc all --package ~.web
+perform package
+web mvc all --package ~.web
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-22 13:43:05
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-22 13:43:16
+web mvc all --package ~.web
+perform package
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-22 13:49:15
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-22 13:49:27
+perform package
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-22 13:54:27
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-22 13:54:36
+web mvc all --package ~.web
+perform package

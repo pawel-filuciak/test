@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_innoenergy_kic2_domain_Partner" modelAttribute="partner" path="/partners" versionField="Version" z="PrzajZlrfMKx6ZEIC6H59ME6ao8=">
+        <field:textarea field="fullName" id="c_com_innoenergy_kic2_domain_Partner_fullName" required="true" z="L536UDykXCEIY5+JU5OjhFbgPwE="/>
+        <field:textarea field="shortName" id="c_com_innoenergy_kic2_domain_Partner_shortName" required="true" z="ovpvdp3Gi8Jrwl2q4wTkjJtkfzY="/>
+        <field:textarea field="vatNumber" id="c_com_innoenergy_kic2_domain_Partner_vatNumber" z="oNg8JDFeTvNniiKsLQFoE1pkRd8="/>
+        <field:textarea field="officialName" id="c_com_innoenergy_kic2_domain_Partner_officialName" z="uTLK9PcEBGzQD8xE7flgHHTcRyA="/>
+        <field:textarea field="officialNameEnglish" id="c_com_innoenergy_kic2_domain_Partner_officialNameEnglish" z="QXQglafPR7EoqzaKr8cC/ipcU3E="/>
+        <field:textarea field="comment" id="c_com_innoenergy_kic2_domain_Partner_comment" z="DTat6YOJOCdeaNHjbKcjFtq4ng0="/>
+        <field:input field="indirectCostPercentage" id="c_com_innoenergy_kic2_domain_Partner_indirectCostPercentage" validationMessageCode="field_invalid_number" z="GwHSrmpKmq9q2YzipUAuZ8Ib0vQ="/>
+        <field:textarea field="pic" id="c_com_innoenergy_kic2_domain_Partner_pic" z="LVjAzm9s3NeeDNDAMJbn3ezRJNY="/>
+        <field:textarea field="dunsNumber" id="c_com_innoenergy_kic2_domain_Partner_dunsNumber" z="uXM2nm/sHpMDns8kW4XO1yCx9cI="/>
+        <field:textarea field="eitNumber" id="c_com_innoenergy_kic2_domain_Partner_eitNumber" z="rhfhaoqzhLVeC9DGfC0ihUQldh4="/>
+        <field:datetime dateTimePattern="${partner_eligibilitydate_date_format}" field="eligibilityDate" id="c_com_innoenergy_kic2_domain_Partner_eligibilityDate" z="MdslDkqvNa20HHqUsOvt8KhLB1M="/>
+        <field:checkbox field="eligibleForEIT" id="c_com_innoenergy_kic2_domain_Partner_eligibleForEIT" z="E3uUXR+xCBdFxO5vjfncIcyQSNk="/>
+        <field:checkbox field="gpaSigned" id="c_com_innoenergy_kic2_domain_Partner_gpaSigned" z="Y6A1ch0LLQpbjhleDqMFf1Zogwk="/>
+        <field:checkbox field="shareHolder" id="c_com_innoenergy_kic2_domain_Partner_shareHolder" z="t6RF5I1evquXvOg8VYVgTJ3j7bc="/>
+        <field:checkbox field="internalAgreement" id="c_com_innoenergy_kic2_domain_Partner_internalAgreement" z="eD5vfTZeCPN4FwUGGdrNc/mzcGM="/>
+        <field:checkbox field="declarationOfHonour" id="c_com_innoenergy_kic2_domain_Partner_declarationOfHonour" z="mm+6kpr2ykQJn3wl1m4205GtFd8="/>
+        <field:checkbox field="legalInformationForm" id="c_com_innoenergy_kic2_domain_Partner_legalInformationForm" z="HKafVtr0xfEQaZB9wAV6rJR00L0="/>
+        <field:checkbox field="cfs" id="c_com_innoenergy_kic2_domain_Partner_cfs" z="ONznQ5rvYiU1tb1r7Q1SsqnxCTo="/>
+        <field:select field="organizationType" id="c_com_innoenergy_kic2_domain_Partner_organizationType" itemValue="id" items="${organizationtypes}" path="/organizationtypes" z="P2z/vID0A6oiKxyXBd9Avo6jzdE="/>
+        <field:select field="tradeStyle" id="c_com_innoenergy_kic2_domain_Partner_tradeStyle" itemValue="id" items="${tradestyles}" path="/tradestyles" z="7dYulzvqqtyz4Y1DJUq+QQR+GVY="/>
+        <field:select field="kicUnit" id="c_com_innoenergy_kic2_domain_Partner_kicUnit" itemValue="id" items="${kicunits}" path="/kicunits" z="YYayIoP1ZAkMkcQ8Gv6nuHq5Nmo="/>
+        <field:simple field="addreses" id="c_com_innoenergy_kic2_domain_Partner_addreses" messageCode="entity_reference_not_managed" messageCodeAttribute="Address" z="WBhIuHGxtiUGh/Wft2ytOiYmPP4="/>
+    </form:update>
+</div>

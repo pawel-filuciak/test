@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_innoenergy_kic2_domain_Partner" items="${partners}" z="VmZ4IKfK+GWB1rXje4I45UnLmUQ=">
+        <table:table data="${partners}" id="l_com_innoenergy_kic2_domain_Partner" path="/partners" z="G5et4oyRUYaJF4q47oKSRkvPds4=">
+            <table:column id="c_com_innoenergy_kic2_domain_Partner_fullName" property="fullName" z="dhcqkiHP14jeOsAIwpKTSZ6t/lU="/>
+            <table:column id="c_com_innoenergy_kic2_domain_Partner_shortName" property="shortName" z="nitJzylpD6L7p3RJH+ui+aYFi40="/>
+            <table:column id="c_com_innoenergy_kic2_domain_Partner_vatNumber" property="vatNumber" z="ZivaGz/weD6Gz09ETaKnnJm4C+Q="/>
+            <table:column id="c_com_innoenergy_kic2_domain_Partner_officialName" property="officialName" z="rlReXRkrDU0nXG1r/Z9lQSSecMw="/>
+            <table:column id="c_com_innoenergy_kic2_domain_Partner_officialNameEnglish" property="officialNameEnglish" z="Ming8OjeTxoGuupySrDe3Bt8oio="/>
+            <table:column id="c_com_innoenergy_kic2_domain_Partner_comment" property="comment" z="MKZwbpuhcXA+ZVjzROth0T0lFK4="/>
+        </table:table>
+    </page:list>
+</div>

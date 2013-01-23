@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_innoenergy_kic2_domain_Firm" object="${firm}" path="/firms" z="qEcAXl2ixTtnP3iUw7BBNlQTk1A=">
+        <field:display field="fullName" id="s_com_innoenergy_kic2_domain_Firm_fullName" object="${firm}" z="aqnxZivmdBRcN2DvIyLj6Skl668="/>
+        <field:display field="shortName" id="s_com_innoenergy_kic2_domain_Firm_shortName" object="${firm}" z="5pAoptT3eMEeLwPgnAcVzWjt4u0="/>
+        <field:display field="vatNumber" id="s_com_innoenergy_kic2_domain_Firm_vatNumber" object="${firm}" z="8L7khbXxQyL6oOiutjnDUORJxu4="/>
+        <field:display field="officialName" id="s_com_innoenergy_kic2_domain_Firm_officialName" object="${firm}" z="o9FE0Yz2z89p/28LQ/3pSxkrf8Q="/>
+        <field:display field="officialNameEnglish" id="s_com_innoenergy_kic2_domain_Firm_officialNameEnglish" object="${firm}" z="LvjozEAMPHPyfFBqfAeZJxYaPBc="/>
+        <field:display field="comment" id="s_com_innoenergy_kic2_domain_Firm_comment" object="${firm}" z="x14j1UFAhDlyqSkqLmUvvH40X5U="/>
+        <field:display field="organizationType" id="s_com_innoenergy_kic2_domain_Firm_organizationType" object="${firm}" z="wrVrZUy6UXeU+L9aNL0P9ybZdgs="/>
+        <field:display field="tradeStyle" id="s_com_innoenergy_kic2_domain_Firm_tradeStyle" object="${firm}" z="x3YI42mINB/54la8c4vr8uyQeis="/>
+        <field:display field="kicUnit" id="s_com_innoenergy_kic2_domain_Firm_kicUnit" object="${firm}" z="x10iqwWCy26/VpuiPm8+nm280LM="/>
+    </page:show>
+</div>
