@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="organizationtypes/list">
-        <put-attribute name="body" value="/WEB-INF/views/organizationtypes/list.jspx"/>
-    </definition>
-<definition extends="default" name="organizationtypes/show">
-        <put-attribute name="body" value="/WEB-INF/views/organizationtypes/show.jspx"/>
-        <put-attribute name="accordion" value="/WEB-INF/views/organizationtypes/accordion.jspx" />
-    </definition>
-<definition extends="default" name="organizationtypes/create">
-        <put-attribute name="body" value="/WEB-INF/views/organizationtypes/create.jspx"/>
-    </definition>
-<definition extends="default" name="organizationtypes/update">
-        <put-attribute name="body" value="/WEB-INF/views/organizationtypes/update.jspx"/>
-        <put-attribute name="accordion" value="/WEB-INF/views/organizationtypes/accordion.jspx" />
-    </definition>
+	<definition extends="list" name="organizationtypes/list">
+		<put-attribute name="body" value="/WEB-INF/views/organizationtypes/list.jspx" />
+		<put-attribute name="menu" value="/WEB-INF/views/organizationtypes/list-menu.jspx" />
+	</definition>
+	
+	<definition extends="default" name="organizationtypes/show">
+		<put-attribute name="menu" value="/WEB-INF/views/organizationtypes/show-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/organizationtypes/show.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/organizationtypes/accordion.jspx" />
+	</definition>
+	
+	<definition extends="default" name="organizationtypes/create">
+		<put-attribute name="menu" value="/WEB-INF/views/organizationtypes/form-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/organizationtypes/create.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/organizationtypes/accordion.jspx" />
+	</definition>
+	
+	<definition extends="default" name="organizationtypes/update">
+		<put-attribute name="menu" value="/WEB-INF/views/organizationtypes/form-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/organizationtypes/update.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/organizationtypes/accordion.jspx" />
+	</definition>
 </tiles-definitions>

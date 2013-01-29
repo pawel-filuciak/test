@@ -38,13 +38,13 @@
       <spring:escapeBody htmlEscape="true" >${itemLabel}</spring:escapeBody>
     </c:set>
 
-    <div id="_${fn:escapeXml(id)}_id">
+    <div id="_${fn:escapeXml(id)}_id" class="control-group">
       <c:choose>
-        <c:when test="${not empty items}">
-          <label for="_${sec_field}_id">
-            <c:out value="${fn:escapeXml(label)}" />:
+        <c:when test="${not empty items}" >
+          <label for="_${sec_field}_id" class="control-label">
+            <c:out value="${fn:escapeXml(label)}" />
           </label>
-          <div class="input">
+          <div class="controls">
           <c:choose>
             <c:when test="${empty itemValue}">
               <c:choose>
@@ -195,7 +195,7 @@
           <spring:message argumentSeparator="," arguments="${label}, " code="field_simple_validation" var="field_validation" htmlEscape="false" />
         </c:otherwise>
       </c:choose>
-      <div class="clear">&#160;</div>
+
     </div>
 
     <c:if test="${empty title}">

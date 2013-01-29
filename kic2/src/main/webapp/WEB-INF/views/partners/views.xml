@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="partners/list">
-        <put-attribute name="body" value="/WEB-INF/views/partners/list.jspx"/>
-    </definition>
-<definition extends="default" name="partners/show">
-        <put-attribute name="body" value="/WEB-INF/views/partners/show.jspx"/>
-        <put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
-    </definition>
-<definition extends="default" name="partners/create">
-        <put-attribute name="body" value="/WEB-INF/views/partners/create.jspx"/>
-    </definition>
-    
+
+	<definition extends="list" name="partners/list">
+		<put-attribute name="body" value="/WEB-INF/views/partners/list.jspx" />
+		<put-attribute name="menu" value="/WEB-INF/views/partners/list-menu.jspx" />
+	</definition>
+	
+	<definition extends="default" name="partners/show">	
+		<put-attribute name="menu" value="/WEB-INF/views/partners/show-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/partners/show.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
+	</definition>
+	
+	<definition extends="default" name="partners/create">
+		<put-attribute name="menu" value="/WEB-INF/views/partners/form-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/partners/create.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
+	</definition>
+
 	<definition extends="default" name="partners/update">
-        <put-attribute name="body" value="/WEB-INF/views/partners/update.jspx"/>
-        <put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
-    </definition>
+		<put-attribute name="menu" value="/WEB-INF/views/partners/update-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/partners/update.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
+	</definition>
 </tiles-definitions>

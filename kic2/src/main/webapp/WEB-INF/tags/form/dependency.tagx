@@ -14,10 +14,6 @@
     </c:if>
     <spring:message arguments="${label}" code="entity_create" var="title_msg" htmlEscape="false" />
     
-    <div class="page-header">
-      <h2>${label} <small>${title_msg}</small></h2>
-    </div>
-    
     <jsp:doBody />
     
     <c:if test="${empty showDependencies}">

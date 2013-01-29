@@ -2,7 +2,7 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_com_innoenergy_kic2_domain_Firm" object="${firm}" path="/firms" z="qEcAXl2ixTtnP3iUw7BBNlQTk1A=">
+    <page:show id="ps_com_innoenergy_kic2_domain_Firm" object="${firm}" z="qEcAXl2ixTtnP3iUw7BBNlQTk1A=">
         <field:display field="fullName" id="s_com_innoenergy_kic2_domain_Firm_fullName" object="${firm}" z="aqnxZivmdBRcN2DvIyLj6Skl668="/>
         <field:display field="shortName" id="s_com_innoenergy_kic2_domain_Firm_shortName" object="${firm}" z="5pAoptT3eMEeLwPgnAcVzWjt4u0="/>
         <field:display field="vatNumber" id="s_com_innoenergy_kic2_domain_Firm_vatNumber" object="${firm}" z="8L7khbXxQyL6oOiutjnDUORJxu4="/>

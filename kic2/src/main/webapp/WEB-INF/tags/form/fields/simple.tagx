@@ -19,7 +19,6 @@
     <div id="_${fn:escapeXml(id)}_id">
       <label for="_${fn:escapeXml(field)}_id">
         <c:out value="${label}" />
-        :
       </label>
       <div class="input">
       <c:choose>
@@ -31,7 +30,6 @@
         </c:otherwise>
       </c:choose>
       </div>
-      <div class="clear">&#160;</div>
     </div>
 
   </c:if>

@@ -52,11 +52,11 @@
       <spring:escapeBody javaScriptEscape="true" >${field}</spring:escapeBody>
     </c:set>
     
-    <div id="_${fn:escapeXml(id)}_id" class="validate">
-      <label for="_${sec_field}_id">
-        <c:out value="${fn:escapeXml(label)}" />:
+    <div id="_${fn:escapeXml(id)}_id" class="control-group">
+      <label for="_${sec_field}_id" class="control-label">
+        <c:out value="${fn:escapeXml(label)}" />
       </label>
-      <div class="input">
+      <div class="controls">
       <c:choose>
         <c:when test="${disableFormBinding}">
           <input id="_${sec_field}_id" name="${sec_field}" type="${fn:escapeXml(type)}" class='${exp_required}' />
@@ -84,7 +84,6 @@
         </c:otherwise>
       </c:choose>
       </div>
-      <div class="clear">&#160;</div>
     </div>
     <br />
     <c:if test="${empty title}">

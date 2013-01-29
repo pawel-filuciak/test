@@ -1,21 +1,18 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" id="menu" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-  <jsp:directive.page contentType="text/html;charset=UTF-8" />
-  <jsp:output omit-xml-declaration="yes" />
-    <menu:menu id="_panelBar" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_partner" z="1c5SWl9hgTSNPwpm3ec/i3c8Mpo=" label="Accordion 1">
-            <menu:item id="i_partner_new" label="Item 1" url="#" z="4xjV01xDZ9Kh11CbimGNrPY2LQw="/>
-            <menu:item id="i_partner_list" label="Item 2" url="#" z="lbpoRNR4iI77PzeiPBiRRca9fgQ="/>
-        </menu:category>
-        <menu:category id="c_organizationtype" z="3LRamqX28YSB93bMns8bAAV/9KQ=" label="Accordion 2">
-            <menu:item id="i_organizationtype_new" label="Item 1" url="#" z="Qus068QLn7Nz3DL+kMj00jFp8OY="/>
-            <menu:item id="i_organizationtype_list" label="Item 2" url="#" z="xtlnuDOUTnKQkIt7ZAvG+Uff4pE="/>
-        </menu:category>
-    </menu:menu>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $("#_panelBar").kendoPanelBar({
-            expandMode: "single"
-        });
-    });    
-    </script>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" 
+	xmlns:jsp="http://java.sun.com/JSP/Page" 
+	version="2.0"
+	class="span2">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	<menu:accordion id="_accordian">		
+		<menu:item id="_card" label="Card" url="#"></menu:item>
+		<menu:item id="_details" label="Details" url="#" active="true"></menu:item>
+		<menu:item id="_rel" label="Relations" url="#"></menu:item>
+		<menu:item id="_address" label="Addresses" url="#"></menu:item>							
+	</menu:accordion>
+
 </div>

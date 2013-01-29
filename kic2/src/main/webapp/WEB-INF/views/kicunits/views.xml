@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="default" name="kicunits/list">
-        <put-attribute name="body" value="/WEB-INF/views/kicunits/list.jspx"/>
-    </definition>
-<definition extends="default" name="kicunits/show">
-        <put-attribute name="body" value="/WEB-INF/views/kicunits/show.jspx"/>
-        <put-attribute name="accordion" value="/WEB-INF/views/kicunits/accordion.jspx" />
-    </definition>
-<definition extends="default" name="kicunits/create">
-        <put-attribute name="body" value="/WEB-INF/views/kicunits/create.jspx"/>
-    </definition>
-<definition extends="default" name="kicunits/update">
-        <put-attribute name="body" value="/WEB-INF/views/kicunits/update.jspx"/>
-        <put-attribute name="accordion" value="/WEB-INF/views/kicunits/accordion.jspx" />
-    </definition>
+
+	<definition extends="list" name="kicunits/list">
+		<put-attribute name="body" value="/WEB-INF/views/kicunits/list.jspx" />
+		<put-attribute name="menu" value="/WEB-INF/views/kicunits/list-menu.jspx" />
+	</definition>
+	
+	<definition extends="default" name="kicunits/show">	
+		<put-attribute name="menu" value="/WEB-INF/views/kicunits/show-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/kicunits/show.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/kicunits/accordion.jspx" />
+	</definition>
+	
+	<definition extends="default" name="kicunits/create">
+		<put-attribute name="menu" value="/WEB-INF/views/kicunits/form-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/kicunits/create.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/kicunits/accordion.jspx" />
+	</definition>
+
+	<definition extends="default" name="kicunits/update">
+		<put-attribute name="menu" value="/WEB-INF/views/kicunits/form-menu.jspx" />
+		<put-attribute name="body" value="/WEB-INF/views/kicunits/update.jspx" />
+		<put-attribute name="accordion" value="/WEB-INF/views/kicunits/accordion.jspx" />
+	</definition>
 </tiles-definitions>

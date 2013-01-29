@@ -7,18 +7,9 @@
 	<jsp:directive.attribute name="z" type="java.lang.String" required="false" description="Used for checking if element has been modified (to recalculate simply provide empty string value)"/>
 	
 	<c:if test="${empty render or render}">
-
-		<c:if test="${empty label}">
-			<spring:message code="menu_category_${fn:toLowerCase(fn:substringAfter(id,'_'))}_label" var="label" htmlEscape="false"/>
-		</c:if>
 		
-		<li id="${fn:escapeXml(id)}">
-			<h2>
-				<c:out value="${label}" />
-			</h2>
-			<ul>
-				<jsp:doBody />
-			</ul>
+		<li id="${fn:escapeXml(id)}" class="nav-header">
+			<c:out value="${label}" />
 		</li>
 	
 	</c:if>

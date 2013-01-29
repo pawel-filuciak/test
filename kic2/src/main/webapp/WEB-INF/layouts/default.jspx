@@ -15,15 +15,18 @@
 		<title><spring:message code="welcome_h3" arguments="${app_name}" /></title>
 	</head>
 	
-  	<body class="tundra spring">
-   		<div id="wrapper">
-		    <tiles:insertAttribute name="header" ignore="true" />
-		    <tiles:insertAttribute name="menu" ignore="true"/>  
-		    <tiles:insertAttribute name="accordion" ignore="true"/>   
-		    <div id="main">
-	    		<tiles:insertAttribute name="body"/> 
-		    	<tiles:insertAttribute name="footer" ignore="true"/>
-		    </div>
+	<body>
+		<tiles:insertAttribute name="menu" />
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<tiles:insertAttribute name="accordion" ignore="true"/>
+				<div class="span10">
+					<tiles:insertAttribute name="body"/>						
+				</div>					
+			</div>
+			<hr/>
+			<footer><p><spring:message code="COPYRIGHTS_RES"/></p></footer>
 		</div>
 	</body>
+
 </html>

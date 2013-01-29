@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:kendo="http://www.kendoui.com/jsp/tags" xmlns:spring="http://www.springframework.org/tags" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:kendo="http://www.kendoui.com/jsp/tags" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:spring="http://www.springframework.org/tags" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <spring:url value="/partners" var="read_url"/>
-    <kendo:grid filterable="true" groupable="true" name="productGrid" pageable="true" sortable="true">
+    <kendo:grid name="grid" pageable="true" selectable="true" sortable="true">
         <kendo:grid-columns>
             <kendo:grid-column field="fullName"/>
             <kendo:grid-column field="shortName"/>
@@ -12,7 +12,7 @@
         </kendo:grid-columns>
         <kendo:dataSource pageSize="10">
             <kendo:dataSource-schema>
-                <kendo:dataSource-schema-model>
+                <kendo:dataSource-schema-model id="id">
                     <kendo:dataSource-schema-model-fields>
                         <kendo:dataSource-schema-model-field name="fullName" type="string"/>
                         <kendo:dataSource-schema-model-field name="shortName" type="string"/>

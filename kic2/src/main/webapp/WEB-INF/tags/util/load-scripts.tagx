@@ -16,7 +16,7 @@
 	<spring:url value="/${themeLayout}" var="themeLayoutUrl" />
 	<spring:url value="/${themeTypo}" var="themeTypoUrl" />	 
 	<spring:url value="/resources/styles/kendo/kendo.common.min.css" var="kendo_common_css" />
-	<spring:url value="/resources/styles/common/bootstrap-1.2.0.min.css" var="bootstrap_url" />
+	<spring:url value="/resources/styles/bootstrap.min.css" var="bootstrap_url" />
 	<spring:url value="/resources/styles/common/clear.css" var="clear_url" />
 		
 	<spring:url value="/resources/images/favicon.ico" var="favicon" />		
@@ -29,7 +29,18 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="${themeTypoUrl}" />
 	
 	<link rel="SHORTCUT ICON" href="${favicon}" />
-		
+
+	<style type="text/css">
+	body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	
+	.sidebar-nav {
+		padding: 9px 0;
+	}
+	</style>
+
 	<!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
 	<c:set var="userLocale">
 		<c:set var="plocale">${pageContext.response.locale}</c:set>

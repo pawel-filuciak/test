@@ -17,20 +17,17 @@
     </c:set>
    
     <div id="_${fn:escapeXml(id)}_id">
-      <label for="_${sec_field}_id">
-        <c:out value="${fn:escapeXml(label)}" />:
+      <label for="_${sec_field}_id" class="checkbox">
+        <c:out value="${fn:escapeXml(label)}" />
+		<c:choose>
+		  <c:when test="${disableFormBinding}">
+		    <input id="_${sec_field}_id" name="${sec_field}" type="checkbox"/>
+		  </c:when>
+		  <c:otherwise>
+		    <form:checkbox id="_${sec_field}_id" path="${sec_field}"/>
+		  </c:otherwise>
+		</c:choose>        
       </label>
-      <div class="input">
-	      <c:choose>
-	        <c:when test="${disableFormBinding}">
-	          <input id="_${sec_field}_id" name="${sec_field}" type="checkbox"/>
-	        </c:when>
-	        <c:otherwise>
-	          <form:checkbox id="_${sec_field}_id" path="${sec_field}"/>
-	        </c:otherwise>
-	      </c:choose>
-      </div>
-      <div class="clear">&#160;</div>
     </div>
     
   </c:if>

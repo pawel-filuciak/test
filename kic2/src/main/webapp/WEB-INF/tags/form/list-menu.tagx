@@ -1,0 +1,66 @@
+<jsp:root 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
+	version="2.0">
+	<jsp:output omit-xml-declaration="yes" />
+
+	<jsp:directive.attribute name="path" type="java.lang.String" required="true" rtexprvalue="true" description="Specify the URL path" />
+	<jsp:directive.attribute name="brand" type="java.lang.String" required="false" rtexprvalue="true" />
+	<jsp:directive.attribute name="create" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Include 'create' link into table (default true)" />
+	<jsp:directive.attribute name="delete" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Include 'delete' link into table (default true)" />
+	<jsp:directive.attribute name="render" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Indicate if the contents of this tag and all enclosed tags should be rendered (default 'true')" />
+	<jsp:directive.attribute name="z" type="java.lang.String" required="false" description="Used for checking if element has been modified (to recalculate simply provide empty string value)" />
+
+	<c:if test="${empty render or render}">
+
+		<c:if test="${empty create}">
+			<c:set var="create" value="true" />
+		</c:if>
+
+		<c:if test="${empty delete}">
+			<c:set var="delete" value="true" />
+		</c:if>
+		<spring:url value="${path}" var="pathPattern"/>
+		
+		<spring:message code="EDIT_RES" var="editLabel"/>
+		<spring:message code="CREATE_RES" var="createLabel"/>
+		
+		<script type="text/javascript">
+		<![CDATA[
+			function editItem()
+			{
+				var grid = $("#grid").data("kendoGrid");
+
+		        var selectedRows = grid.select();
+
+		        var selectedDataItems = [];
+
+		        for (var i = 0; i < selectedRows.length; i++) {
+		            var dataItem = grid.dataItem(selectedRows[i]);
+
+		            selectedDataItems.push(dataItem);
+		        }	
+		        if (selectedDataItems.length == 0) {
+		        	alert("Please select one row");
+		        	return;
+		        }
+		        var id = selectedDataItems[0].id
+		        
+		        location.href = "${pathPattern}" + "/" + id + "?form";
+			}
+		]]>
+		</script>
+		<menu:menu id="_mainMenu" search="true" brand="${brand}">
+			<c:if test="${create}">		
+				<menu:item id="_edit" label="${editLabel}" url="javascript:editItem(); return false;"></menu:item>
+				<menu:item id="_create" label="${createLabel}" url="${path}?form"></menu:item>
+			</c:if>							
+		</menu:menu>
+        
+	</c:if>
+</jsp:root>

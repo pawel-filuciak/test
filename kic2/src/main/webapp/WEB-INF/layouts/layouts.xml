@@ -5,18 +5,23 @@
 
 <tiles-definitions>
 
-  <definition name="default" template="/WEB-INF/layouts/default.jspx">
-    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
-    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
-  </definition>
+	<definition name="default" template="/WEB-INF/layouts/default.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/header.jspx" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+	</definition>
 
-  <definition name="public" template="/WEB-INF/layouts/default.jspx">
-    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
-    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
-  </definition>
+	<definition name="list" template="/WEB-INF/layouts/list.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/header.jspx" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+	</definition>
 
-  <definition name="home" template="/WEB-INF/layouts/default.jspx">
-    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
-  </definition>
-    
+	<definition name="public" template="/WEB-INF/layouts/default.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/header.jspx" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+	</definition>
+
+	<definition name="home" template="/WEB-INF/layouts/default.jspx">
+		<put-attribute name="menu" value="/WEB-INF/views/header.jspx" />
+	</definition>
+
 </tiles-definitions>

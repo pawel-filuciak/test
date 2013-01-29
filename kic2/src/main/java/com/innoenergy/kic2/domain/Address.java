@@ -1,6 +1,10 @@
 package com.innoenergy.kic2.domain;
 
+import java.util.List;
+
 import javax.persistence.ManyToOne;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.springframework.roo.addon.javabean.RooJavaBean;
@@ -38,4 +42,10 @@ public class Address {
     @NotNull
     @ManyToOne
     private Firm firm;
+    
+    public static List<Address> findAllAddressesRelatedToFirm(Long firmId) {
+        TypedQuery<Address> createQuery = entityManager().createQuery("SELECT o FROM Address o where o.firm.id=:firmId ", Address.class);
+        createQuery.setParameter("firmId", firmId);
+		return createQuery.getResultList();
+    }    
 }

@@ -1,35 +1,50 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-  <jsp:directive.page contentType="text/html;charset=UTF-8" />
-  <jsp:output omit-xml-declaration="yes" />
-	<strong>Tu bedzie desktop</strong>
-    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_partner" z="1c5SWl9hgTSNPwpm3ec/i3c8Mpo=">
-            <menu:item id="i_partner_new" messageCode="global_menu_new" url="/partners?form" z="4xjV01xDZ9Kh11CbimGNrPY2LQw="/>
-            <menu:item id="i_partner_list" messageCode="global_menu_list" url="/partners?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lbpoRNR4iI77PzeiPBiRRca9fgQ="/>
-        </menu:category>
-        <menu:category id="c_organizationtype" z="3LRamqX28YSB93bMns8bAAV/9KQ=">
-            <menu:item id="i_organizationtype_new" messageCode="global_menu_new" url="/organizationtypes?form" z="Qus068QLn7Nz3DL+kMj00jFp8OY="/>
-            <menu:item id="i_organizationtype_list" messageCode="global_menu_list" url="/organizationtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xtlnuDOUTnKQkIt7ZAvG+Uff4pE="/>
-        </menu:category>
-        <menu:category id="c_firm" z="BSG7O1Hy+H2jxzo5lUhqFeezZCY=">
-            <menu:item id="i_firm_new" messageCode="global_menu_new" url="/firms?form" z="jBf7UJpSc8ZaEOkM3VWRSF7/pKg="/>
-            <menu:item id="i_firm_list" messageCode="global_menu_list" url="/firms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="qn6JV9o90I3bFilfPdSU8yNQAxQ="/>
-        </menu:category>
-        <menu:category id="c_address" z="my5R1aInTRohGzWz9TL4j8LX/vE=">
-            <menu:item id="i_address_new" messageCode="global_menu_new" url="/addresses?form" z="vg+UZ0neKcizSzKiVzXeI3oY1BA="/>
-            <menu:item id="i_address_list" messageCode="global_menu_list" url="/addresses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="u8ooCATbc0N+VHl1spo80t0zy+k="/>
-        </menu:category>
-        <menu:category id="c_country" z="+9IFFFqXHr5bWdYjx7upDibmQfo=">
-            <menu:item id="i_country_new" messageCode="global_menu_new" url="/countrys?form" z="OnEHsuvR46cQji6jmcBL0pJOBMc="/>
-            <menu:item id="i_country_list" messageCode="global_menu_list" url="/countrys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="AwKhjnZH+dOj0X4glIoj4SVuHNY="/>
-        </menu:category>
-        <menu:category id="c_tradestyle" z="sfhUvybFi1d5Jgg2mRKYgkxBPKA=">
-            <menu:item id="i_tradestyle_new" messageCode="global_menu_new" url="/tradestyles?form" z="BqKWu5w04F6X+vVKSqENrPACNOQ="/>
-            <menu:item id="i_tradestyle_list" messageCode="global_menu_list" url="/tradestyles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="c4wFLXZuVkTP8Va1JB5RCNjnmuc="/>
-        </menu:category>
-        <menu:category id="c_kicunit" z="D5hZRXU9ige8OeaAJ5C2OqNOlDs=">
-            <menu:item id="i_kicunit_new" messageCode="global_menu_new" url="/kicunits?form" z="UkqX3QIQM33HqjJ5zUkmk0nNBKI="/>
-            <menu:item id="i_kicunit_list" messageCode="global_menu_list" url="/kicunits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2DvYIdBFfs3SHfc7vZcWWaYkprQ="/>
-        </menu:category>
-    </menu:menu>
+<div xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+	xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
+	version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<strong>Tu bedzie desktop</strong> zobacz <a href="http://metroui.org.ua/windows8start.php">example</a>
+	
+	<spring:message code="LIST_RES" var="listLabel"/>
+	<spring:message code="CREATE_RES" var="createLabel"/>	
+	<spring:message code="label_com_innoenergy_kic2_domain_partner" var="partnerLabel"/>
+	<spring:message code="label_com_innoenergy_kic2_domain_organizationtype" var="orgTypeLabel"/>
+	<spring:message code="label_com_innoenergy_kic2_domain_firm" var="firmLabel"/>
+	<spring:message code="label_com_innoenergy_kic2_domain_address" var="addressLabel"/>
+	<spring:message code="label_com_innoenergy_kic2_domain_address_country" var="countryLabel"/>
+	<spring:message code="label_com_innoenergy_kic2_domain_tradestyle" var="tradeStyleLabel"/>
+	<spring:message code="label_com_innoenergy_kic2_domain_partner_kicunit" var="kicUnitLabel"/>
+	
+    <menu:accordion id="_desktop" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_partner" label="${partnerLabel}" z="1c5SWl9hgTSNPwpm3ec/i3c8Mpo="/>
+        <menu:item id="i_partner_new" label="${createLabel}" url="/partners?form" z="4xjV01xDZ9Kh11CbimGNrPY2LQw="/>
+        <menu:item id="i_partner_list" label="${listLabel}" url="/partners?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lbpoRNR4iI77PzeiPBiRRca9fgQ="/>
+        
+        <menu:category id="c_organizationtype" label="${orgTypeLabel}" z="3LRamqX28YSB93bMns8bAAV/9KQ="/>
+        <menu:item id="i_organizationtype_new" label="${createLabel}" url="/organizationtypes?form" z="Qus068QLn7Nz3DL+kMj00jFp8OY="/>
+        <menu:item id="i_organizationtype_list" label="${listLabel}" url="/organizationtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xtlnuDOUTnKQkIt7ZAvG+Uff4pE="/>
+        
+        <menu:category id="c_firm" label="${firmLabel}" z="BSG7O1Hy+H2jxzo5lUhqFeezZCY="/>
+        <menu:item id="i_firm_new" label="${createLabel}" url="/firms?form" z="jBf7UJpSc8ZaEOkM3VWRSF7/pKg="/>
+        <menu:item id="i_firm_list" label="${listLabel}" url="/firms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="qn6JV9o90I3bFilfPdSU8yNQAxQ="/>
+
+        <menu:category id="c_address" label="${addressLabel}" z="my5R1aInTRohGzWz9TL4j8LX/vE="/>
+        <menu:item id="i_address_new" label="${createLabel}" url="/addresses?form" z="vg+UZ0neKcizSzKiVzXeI3oY1BA="/>
+        <menu:item id="i_address_list" label="${listLabel}" url="/addresses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="u8ooCATbc0N+VHl1spo80t0zy+k="/>
+            
+        <menu:category id="c_country" label="${countryLabel}" z="+9IFFFqXHr5bWdYjx7upDibmQfo="/>
+        <menu:item id="i_country_new" label="${createLabel}" url="/countrys?form" z="OnEHsuvR46cQji6jmcBL0pJOBMc="/>
+        <menu:item id="i_country_list" label="${listLabel}" url="/countrys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="AwKhjnZH+dOj0X4glIoj4SVuHNY="/>
+
+        <menu:category id="c_tradestyle" label="${tradeStyleLabel}" z="sfhUvybFi1d5Jgg2mRKYgkxBPKA="/>
+        <menu:item id="i_tradestyle_new" label="${createLabel}" url="/tradestyles?form" z="BqKWu5w04F6X+vVKSqENrPACNOQ="/>
+        <menu:item id="i_tradestyle_list" label="${listLabel}" url="/tradestyles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="c4wFLXZuVkTP8Va1JB5RCNjnmuc="/>
+
+        <menu:category id="c_kicunit" label="${kicUnitLabel}" z="D5hZRXU9ige8OeaAJ5C2OqNOlDs="/>
+        <menu:item id="i_kicunit_new" label="${createLabel}" url="/kicunits?form" z="UkqX3QIQM33HqjJ5zUkmk0nNBKI="/>
+        <menu:item id="i_kicunit_list" label="${listLabel}" url="/kicunits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2DvYIdBFfs3SHfc7vZcWWaYkprQ="/>
+            
+    </menu:accordion>	
 </div>

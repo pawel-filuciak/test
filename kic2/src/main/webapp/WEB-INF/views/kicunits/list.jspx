@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     
 	<spring:url value="/kicunits" var="readUrl"/>
-    <kendo:grid filterable="true" groupable="true" name="productGrid" pageable="true" sortable="true">
+    <kendo:grid name="grid" pageable="true" selectable="true" sortable="true">
         <kendo:grid-columns>
             <kendo:grid-column field="name"/>
         </kendo:grid-columns>

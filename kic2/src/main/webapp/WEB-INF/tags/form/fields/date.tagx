@@ -33,11 +33,11 @@
       <c:set value="false" var="required" />
     </c:if>
 
-    <div id="_${sec_id}_id">
-      <label for="_${sec_field}_id">
-        <c:out value="${label}" />:
+    <div id="_${sec_id}_id" class="control-group">
+      <label for="_${sec_field}_id" class="control-label">
+        <c:out value="${label}" />
       </label>
-      <div class="input">
+      <div class="controls">
       <c:choose>
         <c:when test="${disableFormBinding}">
           <input id="_${sec_field}_id" name="${sec_field}" />
@@ -69,9 +69,9 @@
     <script type="text/javascript">
     
 	  $(document).ready(function(){
-		  $.datepicker.setDefaults( { dateFormat: 'dd/mm/yy' } );
-		  
-		  $('#_${sec_field}_id').datepicker();
+		$("#_${sec_field}_id").kendoDatePicker({
+			format: "${dateTimePattern}"
+		});
 		  $('#_${sec_field}_id').rules('add', { required: ${required}, messages: { required:'${field_validation}' } });
 	  });
 	 </script>
