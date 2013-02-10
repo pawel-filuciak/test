@@ -35,7 +35,7 @@
       :
       </label>
       <div class="input">
-        <form:textarea id="_${sec_field}_id" path="${sec_field}" disabled="${disabled}" cssClass="k-textbox"/>
+        <form:textarea id="_${sec_field}_id" path="${sec_field}" disabled="${disabled}"/>
       </div>	
       <form:errors cssClass="errors" id="_${sec_field}_error_id" path="${sec_field}" />
       <div class="clear">&#160;</div>

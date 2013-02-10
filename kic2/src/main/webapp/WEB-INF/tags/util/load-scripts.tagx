@@ -2,32 +2,45 @@
 
 	<jsp:output omit-xml-declaration="yes" />
 		
-	<spring:url value="/resources/js/kendo/jquery.min.js" var="jquery_url" />
-	<spring:url value="/resources/js/jquery/jquery.ui.core.js" var="jquery_ui_core_url" />
-	<spring:url value="/resources/js/jquery/jquery.validator.js" var="jquery_validator_url" />
-	<spring:url value="/resources/js/jquery/jquery.ui.mask.js" var="jquery_mask_url" />
-	<spring:url value="/resources/js/kendo/kendo.web.min.js" var="kendo_url_js" />
+	<!-- Javascript -->
+	<spring:url value="/resources/js/kendo/jquery.min.js" var="jquery" />
+	<spring:url value="/resources/js/jquery/jquery.validator.js" var="jquery_validate" />
+	<spring:url value="/resources/js/jquery/additional-methods.min.js" var="jquery_validate_extras" />
+	<spring:url value="/resources/js/bootstrap/bootstrap.min.js" var="bootstrap" />
+	<spring:url value="/resources/js/kendo/kendo.web.min.js" var="kendo" />
 	 	 	
-	<spring:theme code="coloring" var="themeColoring" />
-	<spring:theme code="layout" var="themeLayout" />
-	<spring:theme code="typo" var="themeTypo" />
-	
-	<spring:url value="/${themeColoring}" var="themeColoringUrl" />
-	<spring:url value="/${themeLayout}" var="themeLayoutUrl" />
-	<spring:url value="/${themeTypo}" var="themeTypoUrl" />	 
-	<spring:url value="/resources/styles/kendo/kendo.common.min.css" var="kendo_common_css" />
-	<spring:url value="/resources/styles/bootstrap.min.css" var="bootstrap_url" />
-	<spring:url value="/resources/styles/common/clear.css" var="clear_url" />
-		
-	<spring:url value="/resources/images/favicon.ico" var="favicon" />		
-		
-	<link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_url}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="${clear_url}" />		    	
+	<script src="${jquery}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+	<script src="${jquery_validate}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+	<script src="${jquery_validate_extras}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+	<script src="${bootstrap}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+	<script src="${kendo}" type="text/javascript"><!-- required for FF3 and Opera --></script>	 	 	
+	 	 	
+	<!-- CSS --> 	 	 	 	
+	<spring:url value="/resources/styles/kendo/kendo.common.min.css" var="kendo_common_css" />		
 	<link rel="stylesheet" type="text/css" media="screen" href="${kendo_common_css}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="${themeColoringUrl}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="${themeLayoutUrl}" />
-	<link rel="stylesheet" type="text/css" media="screen" href="${themeTypoUrl}" />
+		 	 	
+	<!-- Theme --> 	 	
+	<spring:theme code="bootstrap" var="bootstrap_theme" />
+	<spring:theme code="kendo" var="kendo_theme" />
+	<spring:theme code="css" var="css_theme" />
 	
+	<c:if test="${not empty bootstrap_theme}">	
+		<spring:url value="/${bootstrap_theme}" var="bootstrap_theme_url" />
+		<link rel="stylesheet" type="text/css" media="screen" href="${bootstrap_theme_url}" />
+	</c:if>
+		
+	<c:if test="${not empty kendo_theme}">	
+		<spring:url value="/${kendo_theme}" var="kendo_theme_url" />
+		<link rel="stylesheet" type="text/css" media="screen" href="${kendo_theme_url}" />
+	</c:if>
+	
+	<c:if test="${not empty css_theme}">	
+		<spring:url value="/${css_theme}" var="css_theme_url" />
+		<link rel="stylesheet" type="text/css" media="screen" href="${css_theme_url}" />
+	</c:if>	
+			
+	<!-- Favicon --> 		
+	<spring:url value="/resources/images/favicon.ico" var="favicon" />
 	<link rel="SHORTCUT ICON" href="${favicon}" />
 
 	<style type="text/css">
@@ -49,8 +62,5 @@
 	
 	<script type="text/javascript">var djConfig = {parseOnLoad: false, isDebug: false, locale: '${fn:toLowerCase(userLocale)}'};</script>
 		
-	<script src="${jquery_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
-	<script src="${jquery_validator_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
-	<script src="${kendo_url_js}" type="text/javascript"><!-- required for FF3 and Opera --></script>
 
 </jsp:root>
