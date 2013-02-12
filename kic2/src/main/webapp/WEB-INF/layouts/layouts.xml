@@ -20,8 +20,9 @@
 		<put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
 	</definition>
 
-	<definition name="home" template="/WEB-INF/layouts/default.jspx">
-		<put-attribute name="menu" value="/WEB-INF/views/header.jspx" />
+	<definition name="home" template="/WEB-INF/layouts/tiles.jspx">
 	</definition>
+	
+	
 
 </tiles-definitions>

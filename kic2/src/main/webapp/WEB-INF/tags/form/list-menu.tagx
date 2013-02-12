@@ -57,7 +57,7 @@
 		</script>
 		<menu:menu id="_mainMenu" search="true" brand="${brand}">
 			<c:if test="${create}">		
-				<menu:item id="_edit" label="${editLabel}" url="javascript:editItem(); return false;"></menu:item>
+				<menu:item id="_edit" label="${editLabel}" url="javascript:editItem();"></menu:item>
 				<menu:item id="_create" label="${createLabel}" url="${path}?form"></menu:item>
 			</c:if>							
 		</menu:menu>

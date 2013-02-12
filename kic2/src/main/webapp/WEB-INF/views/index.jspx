@@ -1,11 +1,10 @@
-<div xmlns:spring="http://www.springframework.org/tags" 
+<jsp:root xmlns:spring="http://www.springframework.org/tags" 
 	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
 	xmlns:jsp="http://java.sun.com/JSP/Page" 
 	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
 	version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	<strong>Tu bedzie desktop</strong> zobacz <a href="http://metroui.org.ua/windows8start.php">example</a>
 	
 	<spring:message code="LIST_RES" var="listLabel"/>
 	<spring:message code="CREATE_RES" var="createLabel"/>	
@@ -17,34 +16,258 @@
 	<spring:message code="label_com_innoenergy_kic2_domain_tradestyle" var="tradeStyleLabel"/>
 	<spring:message code="label_com_innoenergy_kic2_domain_partner_kicunit" var="kicUnitLabel"/>
 	
-    <menu:accordion id="_desktop" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_partner" label="${partnerLabel}" z="1c5SWl9hgTSNPwpm3ec/i3c8Mpo="/>
-        <menu:item id="i_partner_new" label="${createLabel}" url="/partners?form" z="4xjV01xDZ9Kh11CbimGNrPY2LQw="/>
-        <menu:item id="i_partner_list" label="${listLabel}" url="/partners?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lbpoRNR4iI77PzeiPBiRRca9fgQ="/>
-        
-        <menu:category id="c_organizationtype" label="${orgTypeLabel}" z="3LRamqX28YSB93bMns8bAAV/9KQ="/>
-        <menu:item id="i_organizationtype_new" label="${createLabel}" url="/organizationtypes?form" z="Qus068QLn7Nz3DL+kMj00jFp8OY="/>
-        <menu:item id="i_organizationtype_list" label="${listLabel}" url="/organizationtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xtlnuDOUTnKQkIt7ZAvG+Uff4pE="/>
-        
-        <menu:category id="c_firm" label="${firmLabel}" z="BSG7O1Hy+H2jxzo5lUhqFeezZCY="/>
-        <menu:item id="i_firm_new" label="${createLabel}" url="/firms?form" z="jBf7UJpSc8ZaEOkM3VWRSF7/pKg="/>
-        <menu:item id="i_firm_list" label="${listLabel}" url="/firms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="qn6JV9o90I3bFilfPdSU8yNQAxQ="/>
-
-        <menu:category id="c_address" label="${addressLabel}" z="my5R1aInTRohGzWz9TL4j8LX/vE="/>
-        <menu:item id="i_address_new" label="${createLabel}" url="/addresses?form" z="vg+UZ0neKcizSzKiVzXeI3oY1BA="/>
-        <menu:item id="i_address_list" label="${listLabel}" url="/addresses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="u8ooCATbc0N+VHl1spo80t0zy+k="/>
+	<spring:url value="/" var="root" />
+	
+    <div class="tile-group" style="width: auto; max-width: 2415px;">
+    
+        <div class="tile bg-color-orangeDark">
+            <div class="tile-content">
+                <h2 style="margin-bottom: 5px;"><a href="${root}partners?form">${createLabel}</a></h2>
+                <h3 style="margin-bottom: 5px;"><a href="${root}partners">${listLabel}</a></h3>
+            </div>        
+            <div class="brand">
+                <span class="name">${partnerLabel}</span>
+            </div>
+        </div>    
+    
+        <div class="tile bg-color-green">
+            <div class="tile-content">
+                <h2 style="margin-bottom: 5px;"><a href="${root}organizationtypes?form">${createLabel}</a></h2>
+                <h3 style="margin-bottom: 5px;"><a href="${root}organizationtypes">${listLabel}</a></h3>
+            </div>        
+            <div class="brand">
+                <span class="name">${orgTypeLabel}</span>
+            </div>
+        </div> 
+          
+        <div class="tile bg-color-red">
+            <div class="tile-content">
+                <h2 style="margin-bottom: 5px;"><a href="${root}firms?form">${createLabel}</a></h2>
+                <h3 style="margin-bottom: 5px;"><a href="${root}firms">${listLabel}</a></h3>
+            </div>        
+            <div class="brand">
+                <span class="name">${firmLabel}</span>
+            </div>
+        </div>           
+    
+        <div class="tile bg-color-blueDark">
+            <div class="tile-content">
+                <h2 style="margin-bottom: 5px;"><a href="${root}addresses?form">${createLabel}</a></h2>
+                <h3 style="margin-bottom: 5px;"><a href="${root}addresses">${listLabel}</a></h3>
+            </div>        
+            <div class="brand">
+                <span class="name">${addressLabel}</span>
+            </div>
+        </div>
             
-        <menu:category id="c_country" label="${countryLabel}" z="+9IFFFqXHr5bWdYjx7upDibmQfo="/>
-        <menu:item id="i_country_new" label="${createLabel}" url="/countrys?form" z="OnEHsuvR46cQji6jmcBL0pJOBMc="/>
-        <menu:item id="i_country_list" label="${listLabel}" url="/countrys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="AwKhjnZH+dOj0X4glIoj4SVuHNY="/>
-
-        <menu:category id="c_tradestyle" label="${tradeStyleLabel}" z="sfhUvybFi1d5Jgg2mRKYgkxBPKA="/>
-        <menu:item id="i_tradestyle_new" label="${createLabel}" url="/tradestyles?form" z="BqKWu5w04F6X+vVKSqENrPACNOQ="/>
-        <menu:item id="i_tradestyle_list" label="${listLabel}" url="/tradestyles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="c4wFLXZuVkTP8Va1JB5RCNjnmuc="/>
-
-        <menu:category id="c_kicunit" label="${kicUnitLabel}" z="D5hZRXU9ige8OeaAJ5C2OqNOlDs="/>
-        <menu:item id="i_kicunit_new" label="${createLabel}" url="/kicunits?form" z="UkqX3QIQM33HqjJ5zUkmk0nNBKI="/>
-        <menu:item id="i_kicunit_list" label="${listLabel}" url="/kicunits?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2DvYIdBFfs3SHfc7vZcWWaYkprQ="/>
             
-    </menu:accordion>	
-</div>
+        <div class="tile bg-color-greenLight">
+            <div class="tile-content">
+                <h2 style="margin-bottom: 5px;"><a href="${root}countrys?form">${createLabel}</a></h2>
+                <h3 style="margin-bottom: 5px;"><a href="${root}countrys">${listLabel}</a></h3>
+            </div>        
+            <div class="brand">
+                <span class="name">${countryLabel}</span>
+            </div>
+        </div>
+                    
+        <div class="tile bg-color-yellow">
+            <div class="tile-content">
+                <h2 style="margin-bottom: 5px;"><a href="${root}tradestyles?form">${createLabel}</a></h2>
+                <h3 style="margin-bottom: 5px;"><a href="${root}tradestyles">${listLabel}</a></h3>
+            </div>        
+            <div class="brand">
+                <span class="name">${tradeStyleLabel}</span>
+            </div>
+        </div>
+        
+        <div class="tile bg-color-purple">
+            <div class="tile-content">
+                <h2 style="margin-bottom: 5px;"><a href="${root}kicunits?form">${createLabel}</a></h2>
+                <h3 style="margin-bottom: 5px;"><a href="${root}kicunits">${listLabel}</a></h3>
+            </div>        
+            <div class="brand">
+                <span class="name">${kicUnitLabel}</span>
+            </div>
+        </div>                    
+
+        <div class="tile icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/Mail128.png"/>
+            </div>
+            <div class="brand">
+                <div class="badge">10</div>
+                <div class="name">Mail</div>
+            </div>
+        </div>
+
+        <div class="tile double bg-color-green" data-role="tile-slider" data-param-period="3000">
+            <div class="tile-content" style="position: absolute; left: 0px; top: -150px;">
+                <h2>mattberg@live.com</h2>
+                <h5>Re: Wedding Annoucement!</h5>
+                <p>
+                    Congratulations! I'm really excited to celebrate with you all. Thanks for...
+                </p>
+            </div>
+            <div class="tile-content" style="position: absolute; left: 0px; top: 0px;">
+                <h2>tina@live.com</h2>
+                <h5>Re: Wedding Annoucement!</h5>
+                <p>
+                    Huh! Waw!!! I'm really excited to celebrate with you all. Thanks for...
+                </p>
+            </div>
+            <div class="brand">
+                <div class="badge">12</div>                
+            </div>
+        </div>
+        
+        <div class="tile double image-slider" data-role="tile-slider" data-param-period="5000" data-param-direction="left">
+            <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                <img src="${root}images/metro/1.jpg" alt=""/>
+            </div>
+            <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                <img src="${root}images/metro/2.jpg" alt=""/>
+            </div>
+            <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                <img src="${root}images/metro/3.jpg" alt=""/>
+            </div>
+            <div class="tile-content" style="position: absolute; left: 0px; top: 0px;">
+                <img src="${root}images/metro/4.jpg" alt=""/>
+            </div>
+            <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                <img src="${root}images/metro/5.jpg" alt=""/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tile-group tile-drag" style="width: auto; max-width: 966px;">
+        <div class="tile bg-color-blue icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/InternetExplorer128.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">Internet Explorer</span>
+            </div>
+        </div>
+
+        <div class="tile icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/excel2013icon.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">Excel 2013</span>
+            </div>
+        </div>
+
+        <div class="tile icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/word2013icon.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">Word 2013</span>
+            </div>
+        </div>
+
+        <div class="tile icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/onenote2013icon.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">OneNote 2013</span>
+            </div>
+        </div>
+        <div class="tile double image-set">
+            <div class="tile-content">
+                <img src="${root}images/metro/1.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/2.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/3.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/4.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/5.jpg" alt=""/>
+            </div>
+            <div class="brand">
+                <span class="name">Photos</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tile-group" style="width: auto; max-width: 966px;">
+        <div class="tile double image">
+            <div class="tile-content">
+                <img src="${root}images/metro/4.jpg" alt=""/>
+            </div>
+            <div class="brand bg-color-orange">
+                <img class="icon" src="${root}images/metro/Rss128.png"/>
+                <p class="text">This is a desert eagle. He is very hungry and angry bird.</p>
+                <div class="badge">10</div>
+            </div>
+        </div>
+
+        <div class="tile bg-color-blue icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/InternetExplorer128.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">Internet Explorer</span>
+            </div>
+        </div>
+
+        <div class="tile icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/excel2013icon.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">Excel 2013</span>
+            </div>
+        </div>
+
+        <div class="tile icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/word2013icon.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">Word 2013</span>
+            </div>
+        </div>
+
+        <div class="tile icon">
+            <div class="tile-content">
+                <img src="${root}images/metro/onenote2013icon.png"/>
+            </div>
+            <div class="brand">
+                <span class="name">OneNote 2013</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tile-group" style="width: auto; max-width: 966px;">
+        <div class="tile quadro double-vertical image-set">
+            <div class="tile-content">
+                <img src="${root}images/metro/1.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/2.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/3.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/4.jpg" alt=""/>
+            </div>
+            <div class="tile-content">
+                <img src="${root}images/metro/5.jpg" alt=""/>
+            </div>
+            <div class="brand">
+                <span class="name">Photos</span>
+            </div>
+        </div>
+    </div>	
+</jsp:root>

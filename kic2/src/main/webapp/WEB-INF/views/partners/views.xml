@@ -13,10 +13,9 @@
 		<put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
 	</definition>
 	
-	<definition extends="default" name="partners/create">
+	<definition extends="list" name="partners/create">
 		<put-attribute name="menu" value="/WEB-INF/views/partners/form-menu.jspx" />
 		<put-attribute name="body" value="/WEB-INF/views/partners/create.jspx" />
-		<put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
 	</definition>
 
 	<definition extends="default" name="partners/update">

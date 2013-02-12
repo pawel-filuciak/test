@@ -11,7 +11,6 @@
 	 	 	
 	<script src="${jquery}" type="text/javascript"><!-- required for FF3 and Opera --></script>
 	<script src="${jquery_validate}" type="text/javascript"><!-- required for FF3 and Opera --></script>
-	<script src="${jquery_validate_extras}" type="text/javascript"><!-- required for FF3 and Opera --></script>
 	<script src="${bootstrap}" type="text/javascript"><!-- required for FF3 and Opera --></script>
 	<script src="${kendo}" type="text/javascript"><!-- required for FF3 and Opera --></script>	 	 	
 	 	 	

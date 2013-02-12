@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <spring:url value="/partners" var="read_url"/>
-    <kendo:grid name="grid" pageable="true" selectable="true" sortable="true">
+    <kendo:grid name="grid" pageable="true" selectable="true" sortable="true" filterable="true">
         <kendo:grid-columns>
             <kendo:grid-column field="fullName"/>
             <kendo:grid-column field="shortName"/>
@@ -22,7 +22,7 @@
                 </kendo:dataSource-schema-model>
             </kendo:dataSource-schema>
             <kendo:dataSource-transport>
-                <kendo:dataSource-transport-read url="${read_url}"/>
+                <kendo:dataSource-transport-read url="${read_url}" cache="false"/>
             </kendo:dataSource-transport>
         </kendo:dataSource>
     </kendo:grid>
