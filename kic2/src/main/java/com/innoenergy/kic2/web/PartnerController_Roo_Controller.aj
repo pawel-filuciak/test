@@ -33,7 +33,8 @@ privileged aspect PartnerController_Roo_Controller {
         }
         uiModel.asMap().clear();
         partner.persist();
-        return "redirect:/partners/" + encodeUrlPathSegment(partner.getId().toString(), httpServletRequest);
+        String res = "redirect:/partners/" + encodeUrlPathSegment(partner.getId().toString(), httpServletRequest) + "?form";
+		return res;
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -58,7 +59,7 @@ privileged aspect PartnerController_Roo_Controller {
         }
         uiModel.asMap().clear();
         partner.merge();
-        return "redirect:/partners/" + encodeUrlPathSegment(partner.getId().toString(), httpServletRequest);
+        return "redirect:/partners";
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")

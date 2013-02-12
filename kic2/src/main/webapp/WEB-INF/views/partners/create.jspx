@@ -6,9 +6,7 @@
     
 		<div class="tabbable tabs-left">
 			<ul class="nav nav-tabs">
-				<li class="active"><a title="Card" href="#1" data-toggle="tab">General</a></li>
-				<li><a title="Details" href="#2" data-toggle="tab">Details</a></li>
-				<li><a title="Relations" href="#3" data-toggle="tab">Relations</a></li>			
+				<li class="active"><a href="#1" data-toggle="tab">General</a></li>			
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane active" id="1">
@@ -34,27 +32,7 @@
 				        </div>					
 					</div>
 				</div>    
-		
-		
-				<div class="tab-pane" id="2">
-					<div class="row-fluid">
-						<div class="span6">
-							<field:checkbox field="eligibleForEIT" id="c_com_innoenergy_kic2_domain_Partner_eligibleForEIT" z="E3uUXR+xCBdFxO5vjfncIcyQSNk="/>
-					        <field:checkbox field="gpaSigned" id="c_com_innoenergy_kic2_domain_Partner_gpaSigned" z="Y6A1ch0LLQpbjhleDqMFf1Zogwk="/>
-					        <field:checkbox field="shareHolder" id="c_com_innoenergy_kic2_domain_Partner_shareHolder" z="t6RF5I1evquXvOg8VYVgTJ3j7bc="/>
-					        <field:checkbox field="internalAgreement" id="c_com_innoenergy_kic2_domain_Partner_internalAgreement" z="eD5vfTZeCPN4FwUGGdrNc/mzcGM="/>					
-						</div>
-						
-				    	<div class="span6">			
-					        <field:checkbox field="declarationOfHonour" id="c_com_innoenergy_kic2_domain_Partner_declarationOfHonour" z="mm+6kpr2ykQJn3wl1m4205GtFd8="/>
-					        <field:checkbox field="legalInformationForm" id="c_com_innoenergy_kic2_domain_Partner_legalInformationForm" z="HKafVtr0xfEQaZB9wAV6rJR00L0="/>
-					        <field:checkbox field="cfs" id="c_com_innoenergy_kic2_domain_Partner_cfs" z="ONznQ5rvYiU1tb1r7Q1SsqnxCTo="/>
-				        </div>					
-					</div>
-				</div>  			
-				
-				
-		        <field:simple field="addreses" id="c_com_innoenergy_kic2_domain_Partner_addreses" messageCode="entity_reference_not_managed" messageCodeAttribute="Address" z="WBhIuHGxtiUGh/Wft2ytOiYmPP4=" render="false"/>
+
 			</div>
 		</div>
 		

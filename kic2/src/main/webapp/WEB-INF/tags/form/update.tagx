@@ -38,10 +38,10 @@
 		
 		<form:form action="${fn:escapeXml(form_url)}" method="PUT" modelAttribute="${modelAttribute}" enctype="${enctype}" class="form-horizontal">			
 			<form:errors cssClass="errors" delimiter="&lt;p/&gt;" />
-			<div class="row-fluid ">
-				<jsp:doBody />
-			</div>
-			<div class="pull-right">
+
+			<jsp:doBody />
+
+			<div class="">
 				<spring:message code="button_save" var="save_button" htmlEscape="false" />
 				<input class="btn btn-primary" id="proceed" type="submit" value="${fn:escapeXml(save_button)}" />
 				<form:hidden id="_${fn:escapeXml(idField)}_id" path="${fn:escapeXml(idField)}" />

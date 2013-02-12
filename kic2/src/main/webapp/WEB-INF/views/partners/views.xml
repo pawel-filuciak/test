@@ -18,9 +18,8 @@
 		<put-attribute name="body" value="/WEB-INF/views/partners/create.jspx" />
 	</definition>
 
-	<definition extends="default" name="partners/update">
+	<definition extends="list" name="partners/update">
 		<put-attribute name="menu" value="/WEB-INF/views/partners/update-menu.jspx" />
 		<put-attribute name="body" value="/WEB-INF/views/partners/update.jspx" />
-		<put-attribute name="accordion" value="/WEB-INF/views/partners/accordion.jspx" />
 	</definition>
 </tiles-definitions>

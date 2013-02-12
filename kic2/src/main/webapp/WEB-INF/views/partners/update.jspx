@@ -3,95 +3,97 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_innoenergy_kic2_domain_Partner" modelAttribute="partner" path="/partners" versionField="Version" z="PrzajZlrfMKx6ZEIC6H59ME6ao8=">
-		<fieldset>
-			<legend>Card</legend>
-			<div class="span12">
-				<div class="row-fluid">
-					<div class="span6">        
-				        <field:input field="fullName" id="c_com_innoenergy_kic2_domain_Partner_fullName" required="true" z="user-managed"/>
-				        <field:input field="shortName" id="c_com_innoenergy_kic2_domain_Partner_shortName" required="true" z="user-managed"/>
-				        <field:input field="vatNumber" id="c_com_innoenergy_kic2_domain_Partner_vatNumber" z="user-managed"/>
-				        <field:input field="officialName" id="c_com_innoenergy_kic2_domain_Partner_officialName" z="user-managed"/>
-				        <field:input field="officialNameEnglish" id="c_com_innoenergy_kic2_domain_Partner_officialNameEnglish" z="user-managed"/>
-				        <field:date dateTimePattern="${partner_eligibilitydate_date_format}" field="eligibilityDate" id="c_com_innoenergy_kic2_domain_Partner_eligibilityDate" z="MdslDkqvNa20HHqUsOvt8KhLB1M="/>
-        			</div>
-        			<div class="span6">
-				        <field:input field="comment" id="c_com_innoenergy_kic2_domain_Partner_comment" z="user-managed"/>
-				        <field:input field="indirectCostPercentage" id="c_com_innoenergy_kic2_domain_Partner_indirectCostPercentage" validationMessageCode="field_invalid_number" z="GwHSrmpKmq9q2YzipUAuZ8Ib0vQ="/>
-				        <field:input field="pic" id="c_com_innoenergy_kic2_domain_Partner_pic" z="user-managed"/>
-				        <field:input field="dunsNumber" id="c_com_innoenergy_kic2_domain_Partner_dunsNumber" z="user-managed"/>
-				        <field:input field="eitNumber" id="c_com_innoenergy_kic2_domain_Partner_eitNumber" z="user-managed"/>        			
-        			</div>
-        		</div>
-        	</div>
-        </fieldset>
-        
-
-		<fieldset>
-			<legend>Details</legend>
-			<div class="span12">
-				<div class="row-fluid">
-					<div class="span6">        
-				        <field:checkbox field="eligibleForEIT" id="c_com_innoenergy_kic2_domain_Partner_eligibleForEIT" z="E3uUXR+xCBdFxO5vjfncIcyQSNk="/>
-				        <field:checkbox field="gpaSigned" id="c_com_innoenergy_kic2_domain_Partner_gpaSigned" z="Y6A1ch0LLQpbjhleDqMFf1Zogwk="/>
-				        <field:checkbox field="shareHolder" id="c_com_innoenergy_kic2_domain_Partner_shareHolder" z="t6RF5I1evquXvOg8VYVgTJ3j7bc="/>
-				        <field:checkbox field="internalAgreement" id="c_com_innoenergy_kic2_domain_Partner_internalAgreement" z="eD5vfTZeCPN4FwUGGdrNc/mzcGM="/>
-        			</div>
-        			
-        			<div class="span6">
-				        <field:checkbox field="declarationOfHonour" id="c_com_innoenergy_kic2_domain_Partner_declarationOfHonour" z="mm+6kpr2ykQJn3wl1m4205GtFd8="/>
-				        <field:checkbox field="legalInformationForm" id="c_com_innoenergy_kic2_domain_Partner_legalInformationForm" z="HKafVtr0xfEQaZB9wAV6rJR00L0="/>
-				        <field:checkbox field="cfs" id="c_com_innoenergy_kic2_domain_Partner_cfs" z="ONznQ5rvYiU1tb1r7Q1SsqnxCTo="/>        			
-        			</div>
-        		</div>
-        	</div>
-        </fieldset>
-
-		<fieldset>
-			<legend>Relations</legend>
-			<div class="span12">
-				<field:select field="organizationType" id="c_com_innoenergy_kic2_domain_Partner_organizationType" itemValue="id" items="${organizationtypes}" path="/organizationtypes" z="P2z/vID0A6oiKxyXBd9Avo6jzdE="/>			
+		
+		<div class="well offset1">
+			<div class="row-fluid">
+				<div class="span6">        
+			        <field:display field="fullName" object="${partner}" id="c_com_innoenergy_kic2_domain_Partner_fullName" z="user-managed"/>
+			        <field:display field="shortName" object="${partner}" id="c_com_innoenergy_kic2_domain_Partner_shortName" z="user-managed"/>					        					       
+       			</div>
+       			<div class="span6">
+			        <field:display field="vatNumber" object="${partner}" id="c_com_innoenergy_kic2_domain_Partner_vatNumber" z="user-managed"/>
+			        <field:display field="officialName" object="${partner}" id="c_com_innoenergy_kic2_domain_Partner_officialName" z="user-managed"/>       			
+       			</div>
+       		</div>
+		</div>
+		
+		<div class="tabbable tabs-left">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#1" data-toggle="tab">General</a></li>
+				<li><a href="#2" data-toggle="tab">Details</a></li>
+				<li><a href="#3" data-toggle="tab">Addresses</a></li>			
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="1">
+					<div class="row-fluid">
+						<div class="span6">        
+					        <field:input field="fullName" id="c_com_innoenergy_kic2_domain_Partner_fullName" required="true" z="user-managed"/>
+					        <field:input field="shortName" id="c_com_innoenergy_kic2_domain_Partner_shortName" required="true" z="user-managed"/>
+					        <field:input field="vatNumber" id="c_com_innoenergy_kic2_domain_Partner_vatNumber" z="user-managed"/>
+					        <field:input field="officialName" id="c_com_innoenergy_kic2_domain_Partner_officialName" z="user-managed"/>
+					        <field:input field="officialNameEnglish" id="c_com_innoenergy_kic2_domain_Partner_officialNameEnglish" z="user-managed"/>
+					        <field:select field="organizationType" id="c_com_innoenergy_kic2_domain_Partner_organizationType" itemValue="id" items="${organizationtypes}" path="/organizationtypes" z="P2z/vID0A6oiKxyXBd9Avo6jzdE="/>
+					        <field:select field="tradeStyle" id="c_com_innoenergy_kic2_domain_Partner_tradeStyle" itemValue="id" items="${tradestyles}" path="/tradestyles" z="7dYulzvqqtyz4Y1DJUq+QQR+GVY="/>
+					        <field:select field="kicUnit" id="c_com_innoenergy_kic2_domain_Partner_kicUnit" itemValue="id" items="${kicunits}" path="/kicunits" z="YYayIoP1ZAkMkcQ8Gv6nuHq5Nmo="/>					        					       
+	        			</div>
+	        			<div class="span6">
+					        <field:input field="comment" id="c_com_innoenergy_kic2_domain_Partner_comment" z="user-managed"/>
+					        <field:input field="indirectCostPercentage" id="c_com_innoenergy_kic2_domain_Partner_indirectCostPercentage" validationMessageCode="field_invalid_number" z="GwHSrmpKmq9q2YzipUAuZ8Ib0vQ="/>
+					        <field:input field="pic" id="c_com_innoenergy_kic2_domain_Partner_pic" z="user-managed"/>
+					        <field:input field="dunsNumber" id="c_com_innoenergy_kic2_domain_Partner_dunsNumber" z="user-managed"/>
+					        <field:input field="eitNumber" id="c_com_innoenergy_kic2_domain_Partner_eitNumber" z="user-managed"/>
+					        <field:date dateTimePattern="${partner_eligibilitydate_date_format}" field="eligibilityDate" id="c_com_innoenergy_kic2_domain_Partner_eligibilityDate" z="MdslDkqvNa20HHqUsOvt8KhLB1M="/>       			
+	        			</div>
+	        		</div>
+	        	</div>
+	        	
+				<div class="tab-pane" id="2">
+					<div class="row-fluid">
+						<div class="span6">        
+					        <field:checkbox field="eligibleForEIT" id="c_com_innoenergy_kic2_domain_Partner_eligibleForEIT" z="E3uUXR+xCBdFxO5vjfncIcyQSNk="/>
+					        <field:checkbox field="gpaSigned" id="c_com_innoenergy_kic2_domain_Partner_gpaSigned" z="Y6A1ch0LLQpbjhleDqMFf1Zogwk="/>
+					        <field:checkbox field="shareHolder" id="c_com_innoenergy_kic2_domain_Partner_shareHolder" z="t6RF5I1evquXvOg8VYVgTJ3j7bc="/>
+					        <field:checkbox field="internalAgreement" id="c_com_innoenergy_kic2_domain_Partner_internalAgreement" z="eD5vfTZeCPN4FwUGGdrNc/mzcGM="/>
+	        			</div>
+	        			
+	        			<div class="span6">
+					        <field:checkbox field="declarationOfHonour" id="c_com_innoenergy_kic2_domain_Partner_declarationOfHonour" z="mm+6kpr2ykQJn3wl1m4205GtFd8="/>
+					        <field:checkbox field="legalInformationForm" id="c_com_innoenergy_kic2_domain_Partner_legalInformationForm" z="HKafVtr0xfEQaZB9wAV6rJR00L0="/>
+					        <field:checkbox field="cfs" id="c_com_innoenergy_kic2_domain_Partner_cfs" z="ONznQ5rvYiU1tb1r7Q1SsqnxCTo="/>        			
+	        			</div>
+	        		</div>
+	        	</div>
+	        	
+				<div class="tab-pane" id="3">
+				    <spring:url value="/partners" var="readUrl"/>
+				    <kendo:grid name="grid" pageable="true" selectable="true" sortable="true">
+				        <kendo:grid-columns>
+				            <kendo:grid-column field="address"/>
+				            <kendo:grid-column field="city"/>
+				            <kendo:grid-column field="zipCode"/>
+				            <kendo:grid-column field="latitude"/>
+				            <kendo:grid-column field="longitude"/>
+				        </kendo:grid-columns>
+				        <kendo:dataSource pageSize="10">
+				            <kendo:dataSource-schema>
+				                <kendo:dataSource-schema-model>
+				                    <kendo:dataSource-schema-model-fields>
+				                        <kendo:dataSource-schema-model-field name="address" type="string"/>
+				                        <kendo:dataSource-schema-model-field name="city" type="string"/>
+				                        <kendo:dataSource-schema-model-field name="zipCode" type="string"/>
+				                        <kendo:dataSource-schema-model-field name="latitude" type="string"/>
+				                        <kendo:dataSource-schema-model-field name="longitude" type="string"/>
+				                    </kendo:dataSource-schema-model-fields>
+				                </kendo:dataSource-schema-model>
+				            </kendo:dataSource-schema>
+				            <kendo:dataSource-transport>
+				                <kendo:dataSource-transport-read url="${readUrl}/${partner.id}?addresses"/>
+				            </kendo:dataSource-transport>
+				        </kendo:dataSource>
+				    </kendo:grid>			        		
+		        </div>	        	        				
 			</div>
-			
-			<div class="span12">
-				<field:select field="tradeStyle" id="c_com_innoenergy_kic2_domain_Partner_tradeStyle" itemValue="id" items="${tradestyles}" path="/tradestyles" z="7dYulzvqqtyz4Y1DJUq+QQR+GVY="/>			
-			</div>
-			
-			<div class="span12">
-				<field:select field="kicUnit" id="c_com_innoenergy_kic2_domain_Partner_kicUnit" itemValue="id" items="${kicunits}" path="/kicunits" z="YYayIoP1ZAkMkcQ8Gv6nuHq5Nmo="/>
-			</div>
-		</fieldset>        
-        
-		<fieldset>
-			<legend>Addresses</legend>
-			<div class="span12">
-			    <spring:url value="/partners" var="readUrl"/>
-			    <kendo:grid name="grid" pageable="true" selectable="true" sortable="true">
-			        <kendo:grid-columns>
-			            <kendo:grid-column field="address"/>
-			            <kendo:grid-column field="city"/>
-			            <kendo:grid-column field="zipCode"/>
-			            <kendo:grid-column field="latitude"/>
-			            <kendo:grid-column field="longitude"/>
-			        </kendo:grid-columns>
-			        <kendo:dataSource pageSize="10">
-			            <kendo:dataSource-schema>
-			                <kendo:dataSource-schema-model>
-			                    <kendo:dataSource-schema-model-fields>
-			                        <kendo:dataSource-schema-model-field name="address" type="string"/>
-			                        <kendo:dataSource-schema-model-field name="city" type="string"/>
-			                        <kendo:dataSource-schema-model-field name="zipCode" type="string"/>
-			                        <kendo:dataSource-schema-model-field name="latitude" type="string"/>
-			                        <kendo:dataSource-schema-model-field name="longitude" type="string"/>
-			                    </kendo:dataSource-schema-model-fields>
-			                </kendo:dataSource-schema-model>
-			            </kendo:dataSource-schema>
-			            <kendo:dataSource-transport>
-			                <kendo:dataSource-transport-read url="${readUrl}/${partner.id}?addresses"/>
-			            </kendo:dataSource-transport>
-			        </kendo:dataSource>
-			    </kendo:grid>			        		
-        	</div>
-        </fieldset>        
+		</div>		      
+                
     </form:update>
 </div>

@@ -10,10 +10,11 @@
 	<jsp:directive.attribute name="search" type="java.lang.Boolean" required="false" rtexprvalue="true" description="The identifier for this tag (do not change!)"/>
 	<jsp:directive.attribute name="render" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Indicate if the contents of this tag and all enclosed tags should be rendered (default 'true')" />
 	<jsp:directive.attribute name="brand" type="java.lang.String" required="false" rtexprvalue="true" />
+	<jsp:directive.attribute name="brandLink" type="java.lang.String" required="false" rtexprvalue="true" />
 	<jsp:directive.attribute name="z" type="java.lang.String" required="false" description="Used for checking if element has been modified (to recalculate simply provide empty string value)"/>
 	
 	<spring:url var="home" value="/" />
-	
+	<spring:url var="brandLinkUrl" value="${brandLink}"/>
 	<c:if test="${empty brand}">
 		<spring:message code="application_name" var="appName"/>
 		<c:set value="${appName}" var="brand" />
@@ -25,7 +26,7 @@
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
 					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</a> 
-				<a class="brand" href="#"><c:out value="${brand}"/></a>
+				<a class="brand" href="${brandLinkUrl}"><c:out value="${brand}"/></a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<jsp:doBody />				

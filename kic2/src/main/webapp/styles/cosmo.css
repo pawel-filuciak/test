@@ -5,3 +5,8 @@
 .tabs {
 	width: 100px;
 }
+
+.display .controls {
+	line-height: 30px;
+	color: inherit;
+}

@@ -20,9 +20,9 @@
       <c:set value="MM/dd/yyyy" var="dateTimePattern" />
     </c:if>
 
-    <div id="_${fn:escapeXml(id)}_id" class="control-group">
+    <div id="_${fn:escapeXml(id)}_id" class="control-group display">
       <label for="_${fn:escapeXml(field)}_id" class="control-label">
-        <c:out value="${label}" />
+        <c:out value="${label}" />:
       </label>
       <div class="controls" id="_${fn:escapeXml(id)}_${fn:escapeXml(field)}_id">
         <c:choose>

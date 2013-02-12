@@ -34,18 +34,9 @@
 			
 			<form:errors cssClass="errors" delimiter="&lt;p/&gt;" />
 
-			<div class="tabbable tabs-left">
-				<ul class="nav nav-tabs">
-					<li class="active" id="_card"><a title="Card" href="#1" data-toggle="tab">Card</a></li>
-					<li id="_details"><a title="Details" href="#2" data-toggle="tab">Details</a></li>
-					<li class="" id="_rel"><a title="Relations" href="#3" data-toggle="tab">Relations</a></li>
-					<li class="" id="_address"><a title="Addresses" href="#3" data-toggle="tab">Addresses</a></li>				
-				</ul>
-				<div class="tab-content">
-					<jsp:doBody />
-				</div>
-			</div>
-			<div class="pull-right">
+			<jsp:doBody />
+
+			<div class="">
 				<spring:message code="button_save" var="save_button" htmlEscape="false" />
 				<input class="btn btn-primary" id="proceed" type="submit" value="${fn:escapeXml(save_button)}" />
 			</div>

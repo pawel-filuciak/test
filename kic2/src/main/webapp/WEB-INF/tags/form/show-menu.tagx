@@ -39,7 +39,7 @@
 		<spring:message code="CREATE_RES" var="createLabel"/>
 		<spring:message code="LIST_RES" var="listLabel"/>
 		
-		<menu:menu id="_mainMenu" brand="${brand}">
+		<menu:menu id="_mainMenu" brand="${brand}" brandLink="${path}">
 			<c:if test="${update}">				
 				<menu:item id="_update" label="${editLabel}" url="${path}/${itemId}?form"></menu:item>
 			</c:if>

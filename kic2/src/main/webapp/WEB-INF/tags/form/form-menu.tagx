@@ -19,7 +19,7 @@
 		<spring:message code="CREATE_RES" var="createLabel"/>
 		<spring:message code="LIST_RES" var="listLabel"/>
 		
-		<menu:menu id="_mainMenu" brand="${brand}">
+		<menu:menu id="_mainMenu" brand="${brand}" brandLink="${path}">
 			<menu:item id="_create" label="${createLabel}" url="${path}?form"></menu:item>
 			<menu:item id="_list" label="${listLabel}" url="${path}"></menu:item>	
 			<jsp:doBody/>							
